@@ -1,0 +1,12 @@
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\ACTWinConsoleMgr\bin\Debug\net6.0\ACTWinConsoleMgr.deps.json
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\ACTWinConsoleMgr\bin\Debug\net6.0\ACTWinConsoleMgr.dll
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\ACTWinConsoleMgr\bin\Debug\net6.0\ref\ACTWinConsoleMgr.dll
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\ACTWinConsoleMgr\bin\Debug\net6.0\ACTWinConsoleMgr.pdb
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\ACTWinConsoleMgr\obj\Debug\net6.0\ACTWinConsoleMgr.csproj.AssemblyReference.cache
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\ACTWinConsoleMgr\obj\Debug\net6.0\ACTWinConsoleMgr.GeneratedMSBuildEditorConfig.editorconfig
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\ACTWinConsoleMgr\obj\Debug\net6.0\ACTWinConsoleMgr.AssemblyInfoInputs.cache
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\ACTWinConsoleMgr\obj\Debug\net6.0\ACTWinConsoleMgr.AssemblyInfo.cs
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\ACTWinConsoleMgr\obj\Debug\net6.0\ACTWinConsoleMgr.csproj.CoreCompileInputs.cache
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\ACTWinConsoleMgr\obj\Debug\net6.0\ACTWinConsoleMgr.dll
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\ACTWinConsoleMgr\obj\Debug\net6.0\ref\ACTWinConsoleMgr.dll
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\ACTWinConsoleMgr\obj\Debug\net6.0\ACTWinConsoleMgr.pdb

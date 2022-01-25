@@ -1,0 +1,91 @@
+﻿{
+  "default_background": "Black",
+  "default_foreground": "White",
+  "default_width": "400",
+  "default_height": "500",
+  "requir_eenter_button_press": true,
+  "admin_mode_keycode": "admin",
+  "hide_admin_menu_item": true,
+  "admin_header_display_markupfile": "defaultadminheader.wcmt",
+  "always_show_admin_header": false,
+  "admin_menu_option_markupfile": "defaultadmin.wcmt",
+  "adminmenu": [
+    {
+      "id": 9000000000,
+      "override_default": null,
+      "text": "Welcome To The Admin Mode",
+      "keycode": "more",
+      "methodname": "",
+      "plugin": "",
+      "display": true,
+      "execute": false,
+      "items": [
+        {
+          "id": 9000000010,
+          "override_default": null,
+          "text": "About IVolt",
+          "keycode": "ivolt",
+          "methodname": "ShowAboutIVolt",
+          "plugin": "",
+          "display": true,
+          "execute": false,
+          "items": [
+            {
+              "id": 9000001000,
+              "text": "About Owners",
+              "keycode": "owners",
+              "methodname": "ShowAboutIVoltOwners",
+              "plugin": "",
+              "execute": true,
+              "items": []
+            }
+          ]
+        },
+        {
+          "id": 9000000020,
+          "override_default": null,
+          "text": "About This Application",
+          "keycode": "app",
+          "methodname": "ShowAboutWinConsoleMgr",
+          "plugin": "",
+          "display": true,
+          "execute": true,
+          "items": []
+        },
+        {
+          "id": 9000000030,
+          "override_default": null,
+          "text": "About ACT",
+          "keycode": "act",
+          "methodname": "ShowAboutACT",
+          "plugin": "",
+          "display": true,
+          "execute": true,
+          "items": []
+        },
+        {
+          "id": 9000000040,
+          "override_default": null,
+          "text": "Exit Admin",
+          "keycode": "exit",
+          "methodname": "!EXITADMIN!",
+          "plugin": "",
+          "display": true,
+          "execute": true,
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": 9000000001,
+      "override_default": null,
+      "text": "Enter - Edit Menu System",
+      "keycode": "edit",
+      "methodname": "!ENTEREDITMODE!",
+      "plugin": "",
+      "display": true,
+      "execute": true,
+      "items": []
+    }
+  ]
+}

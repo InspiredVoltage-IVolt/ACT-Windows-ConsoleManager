@@ -1,0 +1,15 @@
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\Project_TestConsole\bin\Debug\net6.0\Project_TestConsole.exe
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\Project_TestConsole\bin\Debug\net6.0\Project_TestConsole.deps.json
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\Project_TestConsole\bin\Debug\net6.0\Project_TestConsole.runtimeconfig.json
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\Project_TestConsole\bin\Debug\net6.0\Project_TestConsole.dll
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\Project_TestConsole\bin\Debug\net6.0\ref\Project_TestConsole.dll
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\Project_TestConsole\bin\Debug\net6.0\Project_TestConsole.pdb
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\Project_TestConsole\obj\Debug\net6.0\Project_TestConsole.csproj.AssemblyReference.cache
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\Project_TestConsole\obj\Debug\net6.0\Project_TestConsole.GeneratedMSBuildEditorConfig.editorconfig
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\Project_TestConsole\obj\Debug\net6.0\Project_TestConsole.AssemblyInfoInputs.cache
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\Project_TestConsole\obj\Debug\net6.0\Project_TestConsole.AssemblyInfo.cs
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\Project_TestConsole\obj\Debug\net6.0\Project_TestConsole.csproj.CoreCompileInputs.cache
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\Project_TestConsole\obj\Debug\net6.0\Project_TestConsole.dll
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\Project_TestConsole\obj\Debug\net6.0\ref\Project_TestConsole.dll
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\Project_TestConsole\obj\Debug\net6.0\Project_TestConsole.pdb
+D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\Project_TestConsole\obj\Debug\net6.0\Project_TestConsole.genruntimeconfig.cache

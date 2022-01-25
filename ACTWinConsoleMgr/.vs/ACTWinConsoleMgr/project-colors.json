@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "eb97e17e-a6b4-4940-a8ea-fc73034d6c08": {
+      "ProjectGuid": "eb97e17e-a6b4-4940-a8ea-fc73034d6c08",
+      "DisplayName": "ACTWinConsoleMgr",
+      "ColorIndex": 0
+    },
+    "fc234e3e-8673-4643-a352-626b1e43a5d3": {
+      "ProjectGuid": "fc234e3e-8673-4643-a352-626b1e43a5d3",
+      "DisplayName": "ApplicationResources",
+      "ColorIndex": 1
+    },
+    "f30503e3-1bfc-4945-b2c4-6e5aa4dac73f": {
+      "ProjectGuid": "f30503e3-1bfc-4945-b2c4-6e5aa4dac73f",
+      "DisplayName": "Project_TestConsole",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

@@ -1,0 +1,17 @@
+﻿###STARTMARKUP###	
+	bg=Black
+	fg=white
+	txtl="--------------------------------------------------------------"
+	txt="----                  "
+	bg=Black
+	fg=DarkRed
+	txt="ADMIN MODE ENABLED"
+	bg=Black
+	fg=white
+	txt="                 -----"	
+	txtl="--------------------------------------------------------------"
+	txtl=""
+	txtl=""
+###ENDMARKUP###
+
+

@@ -1,0 +1,103 @@
+﻿{
+  "id": "ACTExampleMenu",
+  "name": "ACT Example Menu",
+  "section_hdr": "defaultheader.wcmt",
+  "section_ftr": "defaultfooter.wcmt",
+  "section_admin_hdr": "defaultadminheader.wcmt",
+  "section_admin_ftr": "defaultadminfooter.wcmt",
+  "permissions": "",
+  "menu": {
+    "items": [
+      {
+        "id": 100000000,
+        "override_default": null,
+        "text": "About",
+        "keycode": "a",
+        "methodname": "ShowAbout",
+        "plugin": "",
+        "display": true,
+        "execute": false,
+        "items": [
+          {
+            "id": 110000000,
+            "override_default": null,
+            "text": "About IVolt",
+            "keycode": "ivolt",
+            "methodname": "ShowAboutIVolt",
+            "plugin": "",
+            "display": true,
+            "execute": false,
+            "items": [
+              {
+                "id": 111000000,
+                "override_default": null,
+                "text": "About Owners",
+                "keycode": "owners",
+                "methodname": "ShowAboutIVoltOwners",
+                "plugin": "",
+                "display": true,
+                "execute": true,
+                "items": []
+              }
+            ]
+          },
+          {
+            "id": 120000000,
+            "override_default": null,
+            "text": "About This Application",
+            "keycode": "app",
+            "methodname": "ShowAboutWinConsoleMgr",
+            "plugin": "",
+            "display": true,
+            "execute": true,
+            "items": []
+          },
+          {
+            "id": 130000000,
+            "override_default": null,
+            "text": "About ACT",
+            "keycode": "act",
+            "methodname": "ShowAboutACT",
+            "plugin": "",
+            "display": true,
+            "execute": true,
+            "items": []
+          }
+        ]
+      },
+      {
+        "id": 222222222,
+        "override_default": null,
+        "text": "SPACER",
+        "keycode": "SPACER",
+        "methodname": "SPACER",
+        "plugin": "SPACER",
+        "display": true,
+        "execute": false,
+        "items": []
+      },
+      {
+        "id": 999999999,
+        "override_default": false,
+        "text": "",
+        "keycode": "",
+        "methodname": "",
+        "plugin": "",
+        "display": false,
+        "execute": false,
+        "items": []
+      },
+      {
+        "id": 300000000,
+        "override_default": null,
+        "text": "Exit",
+        "keycode": "exit",
+        "methodname": "!EXIT!",
+        "plugin": "",
+        "display": true,
+        "execute": true,
+        "items": []
+      }
+    ]
+  }
+}
