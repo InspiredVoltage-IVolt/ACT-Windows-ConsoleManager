@@ -1,0 +1,10 @@
+.clear { height: 1%; }
+#header #main_menu li { width: 0; }
+#slider_items .item   { height: 174px; width: 350px; } 
+
+#content .col4 .col.last { width: 196px; }
+#content .col3 .col.last { width: 277px; }
+#content .col2 .col.last { width: 437px; }
+
+#header #main_menu ul ul { background: url('../images/menu-bg2.gif') bottom left no-repeat; padding-bottom: 3px; }
+

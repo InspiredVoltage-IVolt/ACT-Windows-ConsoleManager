@@ -4,12 +4,12 @@
     "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\Project_TestConsole\\Project_TestConsole.csproj": {}
   },
   "projects": {
-    "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\ACTWinConsoleMgr\\ACTWinConsoleMgr.csproj": {
+    "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\ACTWinConsoleMgr\\ACT_ConsoleManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\ACTWinConsoleMgr\\ACTWinConsoleMgr.csproj",
-        "projectName": "ACTWinConsoleMgr",
-        "projectPath": "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\ACTWinConsoleMgr\\ACTWinConsoleMgr.csproj",
+        "projectUniqueName": "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\ACTWinConsoleMgr\\ACT_ConsoleManager.csproj",
+        "projectName": "ACT_ConsoleManager",
+        "projectPath": "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\ACTWinConsoleMgr\\ACT_ConsoleManager.csproj",
         "packagesPath": "C:\\Users\\MarkAlicz\\.nuget\\packages\\",
         "outputPath": "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\ACTWinConsoleMgr\\obj\\",
         "projectStyle": "PackageReference",
@@ -49,6 +49,18 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "ACT_Enums": {
+              "target": "Package",
+              "version": "[2.0.6, )"
+            },
+            "ACT_Interfaces": {
+              "target": "Package",
+              "version": "[2.0.9, )"
+            },
+            "ACT_Security": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
             "IVolt_ACT_ExtensionLibrary": {
               "target": "Package",
               "version": "[2.1.1, )"
@@ -114,8 +126,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\ACTWinConsoleMgr\\ACTWinConsoleMgr.csproj": {
-                "projectPath": "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\ACTWinConsoleMgr\\ACTWinConsoleMgr.csproj"
+              "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\ACTWinConsoleMgr\\ACT_ConsoleManager.csproj": {
+                "projectPath": "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\ACTWinConsoleMgr\\ACT_ConsoleManager.csproj"
               }
             }
           }

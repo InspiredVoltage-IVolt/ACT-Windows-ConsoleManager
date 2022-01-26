@@ -3,19 +3,25 @@ using System;
 using System.Collections.Generic;
 
 
-namespace ACT.Applications.WinConsoleMgr
+namespace ACT.Applications.ConsoleManager
 {
     public static class Core
     {
         public static string _BaseDirectory { get; private set; }
         public static string _MenuBaseDirectory { get; private set; }
-        static string ActiveMenuName = null;
-        public static List<string> ErrorList = new List<string>();
+        public static string _DefaultDataBaseDirectory { get; private set; }
+        public static List<string> ErrorList_History = new List<string>();
 
+        internal static string ActiveMenuName = null;
+
+        /// <summary>
+        /// Setup Base Directoy Paths
+        /// </summary>
         static Core()
         {
-            _BaseDirectory = AppDomain.CurrentDomain.BaseDirectory + "\\Resources\\ACTWinConsoleMgr\\";
+            _BaseDirectory = AppDomain.CurrentDomain.BaseDirectory + "\\Resources\\Applications\\ConsoleManager\\";
             _MenuBaseDirectory = _BaseDirectory + "Menus\\";
+            _DefaultDataBaseDirectory = _DefaultDataBaseDirectory + "Default\\";
         }
 
         /// <summary>
@@ -56,7 +62,7 @@ namespace ACT.Applications.WinConsoleMgr
                 }
                 catch
                 {
-                    ErrorList.Add("Unable to locate the directory");
+                    ErrorList_History.Add("Unable to locate the directory");
                     return -2;
                 }
             }
@@ -78,11 +84,42 @@ namespace ACT.Applications.WinConsoleMgr
 
         }
 
+        /// <summary>
+        /// Menu Files should be places in the following location path
+        ///    DEFAULT LOCATION = _MenuBaseDirectory\###MenuName###\###MenuName###.json
+        ///    CUSTOM LOCATION = ###BaseDirectory\###MenuName###\###MenuName###.json
+        /// </summary>
+        /// <param name="MenuName">Name of the Folder and JSON File and Menu</param>
+        /// <param name="BaseDirectory">OPTIONAL - Only use if you have defined locations elseware</param>
+        /// <returns>true/false if the Menu was Found and Loaded
+        ///     Exceptions if Not - ErrorList_History is AppendedAlso
+        /// </returns>
         public static bool LoadMenu(string MenuName, string BaseDirectory = null)
         {
+            // If Parameter is Null or Empty Set the Base Directory to the Default System Path
             if (BaseDirectory.NullOrEmpty()) { BaseDirectory = _MenuBaseDirectory; }
-            string _MenuJSON = BaseDirectory.EnsureDirectoryFormat() + MenuName.EnsureEndsWith(".json");
-            if (_MenuJSON.FileExists() == false) { ErrorList.Add("Menu Not Found"); return false; }
+
+            // If the MenuFile Exists in the Correct Path
+            // SEE Method Comments
+            string _MenuFileFullPath = BaseDirectory.EnsureDirectoryFormat() + MenuName + "\\" + MenuName + ".json";
+
+            if (_MenuFileFullPath.FileExists() == false)
+            {
+                if (_MenuFileFullPath.Replace(".json", ".acte").FileExists())
+                {
+                    _MenuFileFullPath = _MenuFileFullPath.Replace(".json", ".acte");
+                }
+            }
+            else
+            {
+                if (_MenuFileFullPath.Replace(".json", ".acte").FileExists())
+                {
+                    // ARCHIVE THE MENU AND PROTECT
+
+                    ACT.Applications.ConsoleManager._MenuFileFullPath
+                }
+            }
+            if (_MenuFileFullPath.FileExists() == false) { ErrorList_History.Add("Menu Not Found"); return false; }
             return false;
 
 
