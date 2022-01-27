@@ -9,6 +9,7 @@
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageId>ACT_ConsoleManager</PackageId>
+    <Version></Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -22,7 +23,7 @@
   <ItemGroup>
     <PackageReference Include="ACT_Enums" Version="2.1.0" />
     <PackageReference Include="ACT_Interfaces" Version="2.0.9" />
-    <PackageReference Include="ACT_Security" Version="2.0.3" />
+    <PackageReference Include="ACT_Security" Version="2.0.5" />
     <PackageReference Include="IVolt_ACT_ExtensionLibrary" Version="2.1.1" />
     <PackageReference Include="System.Console" Version="4.3.1" />
     <PackageReference Include="System.Diagnostics.Debug" Version="4.3.0" />

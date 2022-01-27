@@ -161,6 +161,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Menus\ACT_Example_Menu\ACT_Example_Menu.json" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Default\displaymarkups\defaultadmin.wcmt" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\doc\js\jquery.js" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\doc\js\jquery.scrollto.js" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\doc\js\script.js" />
@@ -326,7 +327,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Resources\Applications\" />
     <Folder Include="$(MSBuildThisFileDirectory)Resources\Documentation\" />
   </ItemGroup>
 </Project>

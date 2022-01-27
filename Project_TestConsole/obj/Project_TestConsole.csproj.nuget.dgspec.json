@@ -51,15 +51,11 @@
           "dependencies": {
             "ACT_Enums": {
               "target": "Package",
-              "version": "[2.0.6, )"
+              "version": "[2.1.0, )"
             },
             "ACT_Interfaces": {
               "target": "Package",
               "version": "[2.0.9, )"
-            },
-            "ACT_Security": {
-              "target": "Package",
-              "version": "[2.0.3, )"
             },
             "IVolt_ACT_ExtensionLibrary": {
               "target": "Package",

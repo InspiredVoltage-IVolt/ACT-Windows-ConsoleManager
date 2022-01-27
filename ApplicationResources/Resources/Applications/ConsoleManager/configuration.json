@@ -1,15 +1,31 @@
 ﻿{
+  "id": "DefaultDemo",
+  "display_name": "ACT Default Demo Menu",
+  "menu_header_markupfile": "defaultheader.wcmt",
+  "menu_footer_markupfile": "defaultfooter.wcmt",
   "default_background": "Black",
   "default_foreground": "White",
   "default_width": "400",
   "default_height": "500",
-  "requir_eenter_button_press": true,
+  "require_enter_button_press": true,
+  "login_menu_keycode": "login",
+  "login_menu_item_visible": false,
+  "login_menu_position": "top",
+  "login_menu_show_on_all_menus": true,
+  "login_menu_caption": "Login",
+  "login_menu_display_markupfile": "defaultlogin.wcmt",
+  "login_menu_method_name": "userloggedin",
   "admin_mode_keycode": "admin",
-  "hide_admin_menu_item": true,
+  "admin_mode_menu_item_visible": false,
+  "admin_mode_id": 9999999999,
+  "admin_mode_caption": "Enter Admin Mode",
+  "admin_mode_show_on_all_menus": false,
+  "admin_mode_position": "bottom",
+  "admin_mode_always_show_admin_header": true,
   "admin_header_display_markupfile": "defaultadminheader.wcmt",
-  "always_show_admin_header": false,
   "admin_menu_option_markupfile": "defaultadmin.wcmt",
-  "adminmenu": [
+  "permissions_file": "",
+  "admin_menu_items": [
     {
       "id": 9000000000,
       "override_default": null,
@@ -17,73 +33,41 @@
       "keycode": "more",
       "methodname": "",
       "plugin": "",
-      "display": true,
+      "action_display_children": true,
       "execute": false,
       "items": [
         {
-          "id": 9000000010,
-          "override_default": null,
-          "text": "About IVolt",
-          "keycode": "ivolt",
-          "methodname": "ShowAboutIVolt",
-          "plugin": "",
-          "display": true,
-          "execute": false,
-          "items": [
-            {
-              "id": 9000001000,
-              "text": "About Owners",
-              "keycode": "owners",
-              "methodname": "ShowAboutIVoltOwners",
-              "plugin": "",
-              "execute": true,
-              "items": []
-            }
-          ]
-        },
-        {
-          "id": 9000000020,
-          "override_default": null,
-          "text": "About This Application",
-          "keycode": "app",
-          "methodname": "ShowAboutWinConsoleMgr",
-          "plugin": "",
-          "display": true,
-          "execute": true,
-          "items": []
-        },
-        {
-          "id": 9000000030,
+          "id": 9100000000,
           "override_default": null,
           "text": "About ACT",
           "keycode": "act",
           "methodname": "ShowAboutACT",
           "plugin": "",
-          "display": true,
+          "action_display_children": false,
           "execute": true,
           "items": []
         },
         {
-          "id": 9000000040,
+          "id": 92000000000,
           "override_default": null,
           "text": "Exit Admin",
           "keycode": "exit",
           "methodname": "!EXITADMIN!",
           "plugin": "",
-          "display": true,
+          "action_display_children": false,
           "execute": true,
           "items": []
         }
       ]
     },
     {
-      "id": 9000000001,
+      "id": 9000000009,
       "override_default": null,
       "text": "Enter - Edit Menu System",
       "keycode": "edit",
       "methodname": "!ENTEREDITMODE!",
       "plugin": "",
-      "display": true,
+      "action_display_children": false,
       "execute": true,
       "items": []
     }

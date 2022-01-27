@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "ACT_Enums/2.0.6": {
+      "ACT_Enums/2.1.0": {
         "type": "package",
         "compile": {
           "lib/net6.0/ACT_Enums.dll": {}
@@ -30,26 +30,6 @@
         },
         "runtime": {
           "lib/net6.0/ACT_Interfaces.dll": {}
-        },
-        "contentFiles": {
-          "contentFiles/any/any/_._": {
-            "buildAction": "None",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          }
-        }
-      },
-      "ACT_Security/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "IVolt_ACT_ExtensionLibrary": "2.0.5",
-          "System.Security.Cryptography.Primitives": "4.3.0"
-        },
-        "compile": {
-          "lib/net6.0/ACT_Security.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/ACT_Security.dll": {}
         },
         "contentFiles": {
           "contentFiles/any/any/_._": {
@@ -858,9 +838,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "ACT_Enums": "2.0.6",
+          "ACT_Enums": "2.1.0",
           "ACT_Interfaces": "2.0.9",
-          "ACT_Security": "2.0.3",
           "IVolt_ACT_ExtensionLibrary": "2.1.1",
           "System.Console": "4.3.1",
           "System.Diagnostics.Debug": "4.3.0"
@@ -875,15 +854,15 @@
     }
   },
   "libraries": {
-    "ACT_Enums/2.0.6": {
-      "sha512": "8zRoHWLLnFLbi4iz1EzM8i38jdcYic6Uq2vwckJ7FGORUZYq6waTNkjH14UpCGtMQAjjVwUMiNI1VVAhmgXv+A==",
+    "ACT_Enums/2.1.0": {
+      "sha512": "E9yj/LJ34I0GkfBZMkK2eXIN+q9fHNgeLfweNsjIfBpDEWLUjjvQJyeObmbCVB9zIu1TFWED8AsoBCGQAO8E5w==",
       "type": "package",
-      "path": "act_enums/2.0.6",
+      "path": "act_enums/2.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ACT_Common_Icon.png",
-        "act_enums.2.0.6.nupkg.sha512",
+        "act_enums.2.1.0.nupkg.sha512",
         "act_enums.nuspec",
         "content/Icon.ico",
         "contentFiles/any/net6.0/Icon.ico",
@@ -902,20 +881,6 @@
         "content/ACT_Interfaces.ico",
         "contentFiles/any/net6.0/ACT_Interfaces.ico",
         "lib/net6.0/ACT_Interfaces.dll"
-      ]
-    },
-    "ACT_Security/2.0.3": {
-      "sha512": "gKc2Pp7nA98JzBBvCK/H3CH/y7SYQBuPAF5MNyuQdw4m4+aY0yOftOn4TxXRVwdcpamsVYhFqzYwtnL19dnafA==",
-      "type": "package",
-      "path": "act_security/2.0.3",
-      "files": [
-        ".nupkg.metadata",
-        "ACT_Security_Icon.png",
-        "act_security.2.0.3.nupkg.sha512",
-        "act_security.nuspec",
-        "content/ACT_Security_Icon.ico",
-        "contentFiles/any/net6.0/ACT_Security_Icon.ico",
-        "lib/net6.0/ACT_Security.dll"
       ]
     },
     "FastExcel/3.0.13": {

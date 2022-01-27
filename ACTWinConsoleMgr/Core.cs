@@ -41,47 +41,30 @@ namespace ACT.Applications.ConsoleManager
             if (ActiveMenuName == null) { ActiveMenuName = MenuName; }
             else if (ActiveMenuName == MenuName) { return 0; }
 
-            if (BaseDirectory == "" || BaseDirectory == null)
-            {
-                BaseDirectory = _BaseDirectory;
-            }
+            if (BaseDirectory == "" || BaseDirectory == null) { BaseDirectory = _MenuBaseDirectory; }
 
             // Ensure Directory Exists
-            int _AttemptCount = 0;
-
-        CheckMenu:
-            _AttemptCount++;
-            if (_AttemptCount > 2) { return -2; }
-
             if (System.IO.Directory.Exists(BaseDirectory) == false)
             {
-                try
-                {
-                    System.IO.Directory.CreateDirectory(BaseDirectory);
-                    goto CheckMenu;
-                }
-                catch
-                {
-                    ErrorList_History.Add("Unable to locate the directory");
-                    return -2;
-                }
+                ErrorList_History.Add("Unable to locate the directory");
+                return -2;
+                //try                //{                //    System.IO.Directory.CreateDirectory(BaseDirectory);                //    goto CheckMenu;                //}                //catch                //{                // }
             }
-
-        LoadMenuAtteempt:
-
-            _AttemptCount++;
-            if (_AttemptCount > 2) { return -3; }
 
             try
             {
                 bool _MenuLoaded = false;
                 _MenuLoaded = LoadMenu(MenuName, BaseDirectory);
+                if (_MenuLoaded == false) { return -3; }
             }
-            catch
+            catch (Exception ex)
             {
-                goto LoadMenuAtteempt;
+                ErrorList_History.Add(ex.Message);
+                return -3;
             }
 
+            ActiveMenuName = MenuName;
+            return 1;
         }
 
         /// <summary>
@@ -94,7 +77,7 @@ namespace ACT.Applications.ConsoleManager
         /// <returns>true/false if the Menu was Found and Loaded
         ///     Exceptions if Not - ErrorList_History is AppendedAlso
         /// </returns>
-        public static bool LoadMenu(string MenuName, string BaseDirectory = null)
+        public static bool LoadMenu(string MenuName, string BaseDirectory)
         {
             // If Parameter is Null or Empty Set the Base Directory to the Default System Path
             if (BaseDirectory.NullOrEmpty()) { BaseDirectory = _MenuBaseDirectory; }
@@ -102,6 +85,17 @@ namespace ACT.Applications.ConsoleManager
             // If the MenuFile Exists in the Correct Path
             // SEE Method Comments
             string _MenuFileFullPath = BaseDirectory.EnsureDirectoryFormat() + MenuName + "\\" + MenuName + ".json";
+            string _MenuFileFullPathEncrypted = BaseDirectory.EnsureDirectoryFormat() + MenuName + "\\" + MenuName + ".json";
+
+            bool FoundJsonMenu = false; bool FoundEncryptedMenu = false;
+
+            if (_MenuFileFullPath.FileExists() == true) { FoundJsonMenu = true; }
+            if (_MenuFileFullPathEncrypted.FileExists() == true) { FoundEncryptedMenu = true; }
+
+            if (FoundEncryptedMenu && FoundJsonMenu)
+            {
+                // Replace Encrypted File After Archive
+            }
 
             if (_MenuFileFullPath.FileExists() == false)
             {
@@ -115,8 +109,11 @@ namespace ACT.Applications.ConsoleManager
                 if (_MenuFileFullPath.Replace(".json", ".acte").FileExists())
                 {
                     // ARCHIVE THE MENU AND PROTECT
+                    string _FileData = System.IO.File.ReadAllText(_MenuFileFullPath.ReadAllText());
+                    _FileData = ACT.Core.Security.ProtectData.ProtectString(_FileData).ToBase64String();
+                    _FileData.SaveAllText(_MenuFileFullPath);
 
-                    ACT.Applications.ConsoleManager._MenuFileFullPath
+                    //ACT.Applications.ConsoleManager._MenuFileFullPath
                 }
             }
             if (_MenuFileFullPath.FileExists() == false) { ErrorList_History.Add("Menu Not Found"); return false; }
