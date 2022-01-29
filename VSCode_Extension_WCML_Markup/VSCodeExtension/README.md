@@ -1,0 +1,1 @@
+This extension supports the ACT ConsoleManager Markup Language.

@@ -1,0 +1,60 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "WCML",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#fenced_code_block_csharp"
+		}
+	],	
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.actwcml",
+					"match": "\\b(save|restore|addevent|clr|clear)\\b"
+				},
+				{
+					"name": "markup.bold",
+					"settings": {
+						"foregroundcolor": "Red"
+					},
+					"begin": "###",
+					"end": "###",
+					"match": "\\b(STARTMARKUP|ENDMARKUP)\\b"
+				},
+				{
+					"name": "markup.bold",
+					"match": "\\b(ACTION|ENDACTION)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.actwcml",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.actwcml",
+					"match": "\\\\."
+				}
+			]
+		},
+		"fenced_code_block_csharp": {
+			"begin": "###CS###",
+			"name": "markup.fenced_code.block.markdown",
+			"end": "###ENDCS###",
+			"patterns": [
+				{
+					"include": "source.cs"
+				}
+			]
+		}
+	},
+	"scopeName": "text.wcml"
+}

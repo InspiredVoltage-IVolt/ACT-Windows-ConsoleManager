@@ -1,0 +1,26 @@
+{
+    "openInExternalApp.openMapper": [
+        {
+            "extensionName": "html",
+            "apps": [
+                {
+                    "title": "firefox",
+                    "openCommand": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+                    // open in firefox under private mode
+                    // "args": ["-private-window"]
+                }
+            ]
+        },
+        {
+            "extensionName": "png",
+            "apps": "D:\\Program Files\\paint.net\\paintdotnet.exe"
+        }
+        /* ,
+        {
+            "extensionName": "tsx",
+            // apps can be Object array or just is openCommand
+            // the code is command you can access from shell
+            "apps": "code"
+        } */
+    ]
+}

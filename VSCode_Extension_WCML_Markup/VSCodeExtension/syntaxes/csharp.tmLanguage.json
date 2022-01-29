@@ -1,0 +1,21 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "CS WCML",
+	"patterns": [
+		{
+			"include": "#wcmlcs"
+		}
+	],
+	"repository": {
+		"wcmlcs": {
+			"patterns": [
+				{
+					"name" : "meta.embedded.block.cs",
+					"begin": "@{",
+					"end": "}"
+				}
+			]
+		}
+	},
+	"scopeName": "source.wcmlcs"
+}

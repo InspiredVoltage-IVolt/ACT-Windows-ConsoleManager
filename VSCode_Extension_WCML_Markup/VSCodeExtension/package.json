@@ -1,0 +1,46 @@
+{
+    "name": "wcml",
+    "displayName": "act.windows.console.markup",
+    "description": "Windows Console Manager Markup Language",
+    "version": "1.2.1",
+    "author": {
+        "name": "Mark Alicz",
+        "url": "https://github.com/InspiredVoltage-IVolt",
+        "email": "mark@ivolt.io"
+    },
+   
+    "publisher": "MarkAlicz",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "WCML",
+                "aliases": [
+                    "ACT WinConsole Markup Language",
+                    "WCML",
+                    "ACT WCML"
+                ],
+                "extensions": [
+                    ".wcmt",
+                    ".wcml"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "WCML",
+                "scopeName": "text.wcml",
+                "path": "./syntaxes/actwcml.tmLanguage.json",
+                "embeddedLanguages": {
+                    "meta.embedded.block.csharp": "cs"
+                }
+            }
+        ]
+    }
+}

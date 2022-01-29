@@ -10,8 +10,40 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Releases\wcml-1.2.1.vsix" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.git\config" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.git\description" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.git\HEAD" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.git\hooks\applypatch-msg.sample" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.git\hooks\commit-msg.sample" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.git\hooks\fsmonitor-watchman.sample" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.git\hooks\post-update.sample" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.git\hooks\pre-applypatch.sample" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.git\hooks\pre-commit.sample" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.git\hooks\pre-merge-commit.sample" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.git\hooks\pre-push.sample" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.git\hooks\pre-rebase.sample" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.git\hooks\pre-receive.sample" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.git\hooks\prepare-commit-msg.sample" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.git\hooks\push-to-checkout.sample" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.git\hooks\update.sample" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.git\info\exclude" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\.vscodeignore" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\CHANGELOG.md" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\scripts\validate_schema.js" />
+    <None Include="$(MSBuildThisFileDirectory)VSCodeExtension\vsc-extension-quickstart.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Releases\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)VSCodeExtension\.vscode\launch.json" />
+    <Content Include="$(MSBuildThisFileDirectory)VSCodeExtension\.vscode\settings.json" />
+    <Content Include="$(MSBuildThisFileDirectory)VSCodeExtension\language-configuration.json" />
+    <Content Include="$(MSBuildThisFileDirectory)VSCodeExtension\media\icon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)VSCodeExtension\package.json" />
+    <Content Include="$(MSBuildThisFileDirectory)VSCodeExtension\scripts\tmLanguage.schema.json" />
+    <Content Include="$(MSBuildThisFileDirectory)VSCodeExtension\syntaxes\actwcml.tmLanguage.json" />
+    <Content Include="$(MSBuildThisFileDirectory)VSCodeExtension\syntaxes\csharp.tmLanguage.json" />
   </ItemGroup>
 </Project>
