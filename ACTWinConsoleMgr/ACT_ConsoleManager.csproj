@@ -9,7 +9,20 @@
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageId>ACT_ConsoleManager</PackageId>
-    <Version></Version>
+    <Version>2.0.4</Version>
+    <AssemblyVersion>2.0.4</AssemblyVersion>
+    <FileVersion>2.0.4</FileVersion>
+    <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+    <Authors>IVOLT, Mark Alicz</Authors>
+    <Description>Provides a comprehensive console manager engine that makes creating menus and management applications easy.</Description>
+    <Copyright>2022 IVolt, LLC</Copyright>
+    <PackageProjectUrl>http://www.ivolt.io/ACT</PackageProjectUrl>
+    <PackageIcon>ACT_ConsoleMgr_Icon.png</PackageIcon>
+    <PackageTags>.NET;Windows Console Engine;Console;Console Manager;Console Engine;Windows Console;C#</PackageTags>
+    <PackageReleaseNotes>First Public Release Enjoy!</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <ApplicationIcon>ACT_ConsoleMgr_Icon.ico</ApplicationIcon>
+    <AssemblyName>ACT_ConsoleManager</AssemblyName>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -19,6 +32,17 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DefineConstants>$(DefineConstants)TRACE;WINDOWS</DefineConstants>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="ACT_ConsoleMgr_Icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="M:\Shared drives\Assets\IVolt_Product_Images\ACT\ACT_ConsoleManager\ACT_ConsoleMgr_Icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="ACT_Enums" Version="2.1.0" />

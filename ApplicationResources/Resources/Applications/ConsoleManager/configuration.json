@@ -15,7 +15,7 @@
   "login_menu_caption": "Login",
   "login_menu_display_markupfile": "defaultlogin.wcmt",
   "login_menu_method_name": "userloggedin",
-  "admin_mode_keycode": "admin",
+  "admin_mode_keycode": "adminmode",
   "admin_mode_menu_item_visible": false,
   "admin_mode_id": 9999999999,
   "admin_mode_caption": "Enter Admin Mode",

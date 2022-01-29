@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ACT_ConsoleManager</id>
+    <version>2.0.4</version>
+    <authors>IVOLT, Mark Alicz</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">GPL-3.0-only</license>
+    <licenseUrl>https://licenses.nuget.org/GPL-3.0-only</licenseUrl>
+    <icon>ACT_ConsoleMgr_Icon.png</icon>
+    <projectUrl>http://www.ivolt.io/ACT</projectUrl>
+    <description>Provides a comprehensive console manager engine that makes creating menus and management applications easy.</description>
+    <releaseNotes>First Public Release Enjoy!</releaseNotes>
+    <copyright>2022 IVolt, LLC</copyright>
+    <tags>.NET Windows Console Engine Console Console Manager Console Engine Windows Console C#</tags>
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="ACT_Enums" version="2.1.0" exclude="Build,Analyzers" />
+        <dependency id="ACT_Interfaces" version="2.0.9" exclude="Build,Analyzers" />
+        <dependency id="ACT_Security" version="2.0.5" exclude="Build,Analyzers" />
+        <dependency id="IVolt_ACT_ExtensionLibrary" version="2.1.1" exclude="Build,Analyzers" />
+        <dependency id="System.Console" version="4.3.1" exclude="Build,Analyzers" />
+        <dependency id="System.Diagnostics.Debug" version="4.3.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <contentFiles>
+      <files include="any/net6.0/ACT_ConsoleMgr_Icon.ico" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="D:\IVolt_Releases\ACT_ConsoleManager\Debug\net6.0\ACT_ConsoleManager.dll" target="lib\net6.0\ACT_ConsoleManager.dll" />
+    <file src="D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\ACTWinConsoleMgr\ACT_ConsoleMgr_Icon.ico" target="content\ACT_ConsoleMgr_Icon.ico" />
+    <file src="D:\IVolt_Development\ACTWinConsoleManager\ACTWinConsoleManager\ACTWinConsoleMgr\ACT_ConsoleMgr_Icon.ico" target="contentFiles\any\net6.0\ACT_ConsoleMgr_Icon.ico" />
+    <file src="M:\Shared drives\Assets\IVolt_Product_Images\ACT\ACT_ConsoleManager\ACT_ConsoleMgr_Icon.png" target="\ACT_ConsoleMgr_Icon.png" />
+  </files>
+</package>

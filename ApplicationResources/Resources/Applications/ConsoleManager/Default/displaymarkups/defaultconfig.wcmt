@@ -1,0 +1,24 @@
+﻿###STARTMARKUP###
+	event("exit menu", "restore()")
+	save()
+	clr()
+	bg=Black
+	fg=white
+	txtl="--------------------------------------------------------------"
+	txt="----                  "
+	bg=Black
+	fg=DarkRed
+	txt="WELCOME TO THE DEFAULT ACT CONSOLE MENU"
+	bg=Black
+	fg=white
+	txt="                 -----"	
+	txtl="--------------------------------------------------------------"
+	txtl="To enter admin mode type adminmode followed by the enter key."
+	txtl="--------------------------------------------------------------"
+	txtl=""
+	txt="Please Press Any Key To Continue."
+	getl("")
+	clr()
+###ENDMARKUP###
+
+

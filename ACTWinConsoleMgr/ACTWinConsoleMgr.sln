@@ -9,8 +9,11 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ApplicationResources", "..\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project_TestConsole", "..\Project_TestConsole\Project_TestConsole.csproj", "{F30503E3-1BFC-4945-B2C4-6E5AA4DAC73F}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "VSCode_Extension_WCML_Markup", "..\VSCode_Extension_WCML_Markup\VSCode_Extension_WCML_Markup.shproj", "{CDC3F847-6533-4172-9CE5-6E9219A08668}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\VSCode_Extension_WCML_Markup\VSCode_Extension_WCML_Markup.projitems*{cdc3f847-6533-4172-9ce5-6e9219a08668}*SharedItemsImports = 13
 		..\ApplicationResources\ApplicationResources.projitems*{fc234e3e-8673-4643-a352-626b1e43a5d3}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

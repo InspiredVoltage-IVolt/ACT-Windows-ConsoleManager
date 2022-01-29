@@ -1,8 +1,8 @@
 ﻿{
   "id": "ACTExampleMenu",
   "display_name": "ACT Example Menu",
-  "menu_header_markupfile": "defaultheader.wcmt",
-  "menu_footer_markupfile": "defaultfooter.wcmt",
+  "menu_header_markupfile": "act_example_header.wcmt",
+  "menu_footer_markupfile": "",
   "default_background": "Black",
   "default_foreground": "White",
   "default_width": "400",
@@ -13,8 +13,8 @@
   "login_menu_position": "top",
   "login_menu_show_on_all_menus": true,
   "login_menu_caption": "Login",
-  "login_menu_display_markupfile": "defaultlogin.wcmt",
-  "login_menu_method_name": "userloggedin",
+  "login_menu_display_markupfile": "act_example_login.wcmt",
+  "login_menu_method_name": "userloggingin",
   "admin_mode_keycode": "admin",
   "admin_mode_menu_item_visible": false,
   "admin_mode_id": 9999999999,
@@ -22,136 +22,134 @@
   "admin_mode_show_on_all_menus": false,
   "admin_mode_position": "bottom",
   "admin_mode_always_show_admin_header": true,
-  "admin_header_display_markupfile": "defaultadminheader.wcmt",
-  "admin_menu_option_markupfile": "defaultadmin.wcmt",
-  "permissions_file": "ACT_Console_Permissions.enc",
-  "menu": {
-    "items": [
-      {
-        "id": 1000000000,
-        "override_default": null,
-        "text": "About",
-        "keycode": "a",
-        "methodname": "ShowAbout",
-        "plugin": "",
-        "action_display_children": true,
-        "execute": false,
-        "items": [
-          {
-            "id": 1100000000,
-            "override_default": null,
-            "text": "About IVolt",
-            "keycode": "ivolt",
-            "methodname": "ShowAboutIVolt",
-            "plugin": "",
-            "action_display_children": true,
-            "execute": false,
-            "items": [
-              {
-                "id": 1110000000,
-                "override_default": null,
-                "text": "About Owners",
-                "keycode": "owners",
-                "methodname": "ShowAboutIVoltOwners",
-                "plugin": "",
-                "action_display_children": false,
-                "execute": true,
-                "items": []
-              }
-            ]
-          },
-          {
-            "id": 1200000000,
-            "override_default": null,
-            "text": "About This Application",
-            "keycode": "app",
-            "methodname": "ShowAboutWinConsoleMgr",
-            "plugin": "",
-            "action_display_children": false,
-            "execute": true,
-            "items": []
-          },
-          {
-            "id": 1300000000,
-            "override_default": null,
-            "text": "About ACT",
-            "keycode": "act",
-            "methodname": "ShowAboutACT",
-            "plugin": "",
-            "action_display_children": false,
-            "execute": true,
-            "items": []
-          }
-        ]
-      },
-      {
-        "id": 2000000000,
-        "override_default": null,
-        "text": "SPACER",
-        "keycode": "SPACER",
-        "methodname": "SPACER",
-        "plugin": "SPACER",
-        "action_display_children": false,
-        "execute": false,
-        "items": []
-      },
-      {
-        "id": 9999999999,
-        "override_default": false,
-        "text": "",
-        "keycode": "",
-        "methodname": "",
-        "plugin": "",
-        "action_display_children": false,
-        "execute": false,
-        "items": []
-      },
-      {
-        "id": 3000000000,
-        "override_default": null,
-        "text": "Exit",
-        "keycode": "exit",
-        "methodname": "!EXIT!",
-        "plugin": "",
-        "action_display_children": false,
-        "execute": true,
-        "items": []
-      }
-    ]
-  },
+  "admin_header_display_markupfile": "act_example_header.wcmt",
+  "admin_menu_option_markupfile": "act_example_admin.wcmt",
+  "permissions_file": "act_example_permissions.enc",
+  "menu_items": [
+    {
+      "id": 1000000000,
+      "override_default": null,
+      "text": "About",
+      "keycode": "a",
+      "methodname": "ShowAbout",
+      "plugin": "",
+      "action_display_children": true,
+      "execute": false,
+      "items": [
+        {
+          "id": 1100000000,
+          "override_default": null,
+          "text": "About IVolt",
+          "keycode": "ivolt",
+          "methodname": "ShowAboutIVolt",
+          "plugin": "",
+          "action_display_children": true,
+          "execute": false,
+          "items": [
+            {
+              "id": 1110000000,
+              "override_default": null,
+              "text": "About Owners",
+              "keycode": "owners",
+              "methodname": "ShowAboutIVoltOwners",
+              "plugin": "",
+              "action_display_children": false,
+              "execute": true,
+              "items": []
+            }
+          ]
+        },
+        {
+          "id": 1200000000,
+          "override_default": null,
+          "text": "About This Application",
+          "keycode": "app",
+          "methodname": "ShowAboutWinConsoleMgr",
+          "plugin": "",
+          "action_display_children": false,
+          "execute": true,
+          "items": []
+        },
+        {
+          "id": 1300000000,
+          "override_default": null,
+          "text": "About ACT",
+          "keycode": "act",
+          "methodname": "ShowAboutACT",
+          "plugin": "",
+          "action_display_children": false,
+          "execute": true,
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": 2000000000,
+      "override_default": null,
+      "text": "SPACER",
+      "keycode": "SPACER",
+      "methodname": "SPACER",
+      "plugin": "SPACER",
+      "action_display_children": false,
+      "execute": false,
+      "items": []
+    },
+    {
+      "id": 9999999999,
+      "override_default": false,
+      "text": "",
+      "keycode": "",
+      "methodname": "",
+      "plugin": "",
+      "action_display_children": false,
+      "execute": false,
+      "items": []
+    },
+    {
+      "id": 3000000000,
+      "override_default": null,
+      "text": "Exit",
+      "keycode": "exit",
+      "methodname": "!EXIT!",
+      "plugin": "",
+      "action_display_children": false,
+      "execute": true,
+      "items": []
+    }
+  ],
   "admin_menu_items": [
-      {
-        "id": 9000000002,
-        "override_default": null,
-        "text": "About IVolt",
-        "keycode": "ivolt",
-        "methodname": "ShowAboutIVolt",
-        "plugin": "",
-        "action_display_children": true,
-        "execute": false,
-        "items": [
-          {
-            "id": 9000000010,
-            "text": "About Owners",
-            "keycode": "owners",
-            "methodname": "ShowAboutIVoltOwners",
-            "plugin": "",
-            "action_display_children": false,
-            "execute": true,
-            "items": []
-          }
-        ]
-      },
-      {
-        "id": 9000000003,
-        "override_default": null,
-        "text": "About This Application",
-        "keycode": "app",
-        "methodname": "ShowAboutWinConsoleMgr",
-        "plugin": "",
-        "action_display_children": false,
-        "execute": true,
-        "items": []
-      }
-    ]  
+    {
+      "id": 9000000002,
+      "override_default": null,
+      "text": "About IVolt",
+      "keycode": "ivolt",
+      "methodname": "ShowAboutIVolt",
+      "plugin": "",
+      "action_display_children": true,
+      "execute": false,
+      "items": [
+        {
+          "id": 9000000010,
+          "text": "About Owners",
+          "keycode": "owners",
+          "methodname": "ShowAboutIVoltOwners",
+          "plugin": "",
+          "action_display_children": false,
+          "execute": true,
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": 9000000003,
+      "override_default": null,
+      "text": "About This Application",
+      "keycode": "app",
+      "methodname": "ShowAboutWinConsoleMgr",
+      "plugin": "",
+      "action_display_children": false,
+      "execute": true,
+      "items": []
+    }
+  ]
 }

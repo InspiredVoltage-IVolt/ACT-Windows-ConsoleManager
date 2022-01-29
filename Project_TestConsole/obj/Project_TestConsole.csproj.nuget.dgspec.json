@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\ACTWinConsoleMgr\\ACT_ConsoleManager.csproj": {
-      "version": "1.0.0",
+      "version": "2.0.4",
       "restore": {
         "projectUniqueName": "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\ACTWinConsoleMgr\\ACT_ConsoleManager.csproj",
         "projectName": "ACT_ConsoleManager",
@@ -56,6 +56,10 @@
             "ACT_Interfaces": {
               "target": "Package",
               "version": "[2.0.9, )"
+            },
+            "ACT_Security": {
+              "target": "Package",
+              "version": "[2.0.5, )"
             },
             "IVolt_ACT_ExtensionLibrary": {
               "target": "Package",

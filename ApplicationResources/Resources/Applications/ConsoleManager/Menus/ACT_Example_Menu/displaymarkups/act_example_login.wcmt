@@ -1,0 +1,32 @@
+﻿###STARTMARKUP###
+	save()
+	clr()
+	bg=Black
+	fg=white
+	txtl="--------------------------------------------------------------"
+	txt="----                  "
+	bg=Black
+	fg=DarkRed
+	txt="USER LOGIN DEMO"
+	bg=Black
+	fg=white
+	txt="                 -----"	
+	txtl="--------------------------------------------------------------"
+	txtl="Built in logins are below."
+	txtl="(admin/admin or poweruser/poweruser or guest/guest)"
+	txtl="--------------------------------------------------------------"
+	txtl=""
+	action=login
+	txt="Username: "
+	getl("UserName_ACT_ConsoleManager")
+	txtl=""
+	txt="Password: "
+	getlm("Password_ACT_ConsoleManager","*")
+	run("LoginAction","UserName_ACT_ConsoleManager","Password_ACT_ConsoleManager")
+	endaction=login
+	clr()
+	restore()
+
+###ENDMARKUP###
+
+

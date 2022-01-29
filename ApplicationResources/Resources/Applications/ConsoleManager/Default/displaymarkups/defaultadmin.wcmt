@@ -1,4 +1,5 @@
 ﻿###STARTMARKUP###	
+	clr()
 	bg=Black
 	fg=DarkRed	
 ###ENDMARKUP###
