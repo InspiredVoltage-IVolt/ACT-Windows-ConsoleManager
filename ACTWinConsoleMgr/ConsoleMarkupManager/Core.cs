@@ -14,52 +14,91 @@ namespace ACT.Applications.ConsoleManager.ConsoleMarkupManager
         /// </summary>
         /// <param name="Markup">Key/Value or Just Key</param>
         /// <param name="ConsolePointer"></param>
-        public static void ProcessMarkup(string Markup)
+        public static void ProcessMarkup(string Markup, bool ContinueOnError = true)
         {
             string[] _MarkupData = Markup.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
+            int _Line = 0;
             foreach (var _Markup in _MarkupData)
             {
+                _Line++;
+
+                #region Process Properties And Simple Actions
+                bool _PropertyFound = false;
                 string _Value = "";
+                // Check For Property
+                if ()
+                {
+                    try { _Value = _Markup.Trim().Substring(_Markup.IndexOf('=') + 1); }
+                    catch (Exception Ex)
+                    {
+                        System.Diagnostics.Trace.WriteLine("Error Processing: " + _Markup);
+                        if (ContinueOnError) { continue; }
+                        throw new Exception("Error Processing Line: " + _Line.ToString() + " : (" + Ex.Message + ")");
+                    }
+                    _PropertyFound = true;
+                }
+                // Check For Method
+                if (IsMethod(_Markup))
+                {
+                    try { _Value = _Markup.Trim().Substring(_Markup.IndexOf('(') + 1, _Markup.IndexOf(')')); }
+                    catch (Exception Ex)
+                    {
+                        System.Diagnostics.Trace.WriteLine("Error Processing: " + _Markup);
+                        if (ContinueOnError) { continue; }
+                        throw new Exception("Error Processing Line: " + _Line.ToString() + " : (" + Ex.Message + ")");
+                    }
+                    _PropertyFound = true;
+                }
+                // Check For CSharp Code
 
-                if (_Value.ToLower() != "nl")
-                {
-                    try { _Value = _Markup.Trim().Substring(_Markup.IndexOf('=') + 1); } catch { System.Diagnostics.Trace.WriteLine("Error Processing: " + _Markup); continue; }
-                }
 
-                if (_Markup.ToLower().StartsWith("bg"))
+                if (_PropertyFound)
                 {
-                    Console.BackgroundColor = PSC(_Value);
-                }
-                else if (_Markup.ToLower().StartsWith("fg"))
-                {
-                    Console.ForegroundColor = PSC(_Value);
-                }
-#if WINDOWS
-                else if (_Markup.ToLower().StartsWith("cursorsize"))
-                {
-#pragma warning disable CA1416 // Validate platform compatibility
-                    try { Console.CursorSize = _Value.ToIntFast(); } catch { }
-#pragma warning restore CA1416 // Validate platform compatibility
-                }
-#endif
-                else if (_Markup.ToLower().StartsWith("cursorvisible"))
-                {
-                    Console.CursorVisible = _Value.ToBool(true);
-                }
-                else if (_Markup.ToLower().StartsWith("txt"))
-                {
-                    Console.Write(_Value);
-                }
-                else if (_Markup.ToLower().StartsWith("txtl"))
-                {
-                    Console.WriteLine(_Value);
-                }
-                else if (_Markup.ToLower().StartsWith("nl"))
-                {
-                    Console.WriteLine("");
+                    if (_Markup.ToLower().StartsWith("bg"))
+                    {
+                        Console.BackgroundColor = PSC(_Value);
+                    }
+                    else if (_Markup.ToLower().StartsWith("fg"))
+                    {
+                        Console.ForegroundColor = PSC(_Value);
+                    }
+                    else if (_Markup.ToLower().StartsWith("cursorvisible") || _Markup.ToLower().StartsWith("hidecursor"))
+                    {
+                        Console.CursorVisible = _Value.ToBool(true);
+                    }
+                    else if (_Markup.ToLower().StartsWith("txt") || _Markup.ToLower().StartsWith("wr"))
+                    {
+                        Console.Write(_Value);
+                    }
+                    else if (_Markup.ToLower().StartsWith("txtl") || _Markup.ToLower().StartsWith("wrl"))
+                    {
+                        Console.WriteLine(_Value);
+                    }
+                    else if (_Markup.ToLower().StartsWith("nl") || _Markup.ToLower().StartsWith("crlf"))
+                    {
+                        Console.WriteLine("");
+                    }
                 }
             }
+        }
+
+        private static bool IsProperty(string Value)
+        {
+            Value = Value.Trim();
+            if (Value.Contains("="))
+            {
+                if (Value.IndexOf())
+                { }
+            }
+        }
+
+        private static bool IsMethod(string Value)
+        {
+            Value = Value.Trim();
+            if (Value.IndexOf('(') < 3) { return false; }
+            if (Value.Contains("(") && Value.Contains(")")) { if (Value.IndexOf('(') < Value.IndexOf(')')) { return true; } }
+            return false;
         }
 
         /// <summary>

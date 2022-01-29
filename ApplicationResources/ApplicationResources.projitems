@@ -12,6 +12,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\about.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\blog.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\conception.html" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\config\topics.json" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\contact.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\css\fancybox.css" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\css\ie6.css" />
@@ -135,6 +136,8 @@
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\footer.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\logo.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\menuInclude.html" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\topics\gettingstarted.html" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\topics\wsdl.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\index .bak" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\index.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\index2.html" />
@@ -144,6 +147,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\documentation.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\styles.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\template.html" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\topics\index.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\topics\markuplanguage.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\valid-css.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\valid-html.html" />
@@ -176,6 +180,7 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\doc\js\jquery.js" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\doc\js\jquery.scrollto.js" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\doc\js\script.js" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\js\ACTDynamicHTML.js" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\js\cufon.js" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\js\geometr.font.js" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\js\ie6.js" />

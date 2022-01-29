@@ -3,7 +3,7 @@
     <ul>
         <li><a id="ma1" href="index.html">Home</a></li>
         <li><a id="ma2" href="documentation.html">Getting Started</a></li>
-        <li><a id="ma3" href="/topics/index.aspx">Help Topics</a></li>
+        <li><a id="ma3" href="/topics/index.html">Help Topics</a></li>
         <li><a id="ma4" href="/topics/plugins.html">Plugins</a></li>
         <li><a id="ma5" href="ACT_ConsoleManager_Contact.html">Have Questions?</a></li>
         <li><a id="ma6" href="https://www.act-net.us/" target="_top">ACT - Home</a></li>
@@ -11,22 +11,7 @@
 </div><!-- /#main_menu -->
 
 <script>
-    function ProcessPageLoadActions() {
-
-        var _ulMenuItems = $("#main_menu")[0].children[0];
-        var _atag = undefined;
-        var _CurrentMenuString = 'ma' + CurrentPageMenuID.toString();
-
-        for (var x = 0; x < _ulMenuItems.children.length; x++) {
-            _atag = _ulMenuItems.children[x].children[0];
-            if (_atag.id.toString() == _CurrentMenuString) {
-                _atag.classList.add("current_page_item");
-                return;
-            }
-        }
-
-        _ulMenuItems.children[0].children[0].classList.add("current_page_item");
-    }
+   
 
     $(document).ready(function () {
         ProcessPageLoadActions();
