@@ -1,6 +1,7 @@
 ﻿{
   "id": "ACTExampleMenu",
   "display_name": "ACT Example Menu",
+  "startup_markupfile": "act_example_startup.wcmt",
   "menu_header_markupfile": "act_example_header.wcmt",
   "menu_footer_markupfile": "",
   "default_background": "Black",

@@ -1,0 +1,16 @@
+﻿<div style="width:100%; padding:5px">
+    <b>Actions</b> are not able to have actions defined within them.  Simply put when you define an action you are not able to define another action within the actions markup code.<br />
+    <div style="clear:both"></div>
+    <div style="width:75%; margin-left:auto; margin-right:auto;border:solid; border-width:3px; background-blend-mode: soft-light">
+        <b>Example</b><br /><br />
+        &emsp;clr()<br />
+        &emsp;action=PrintInfoByIndex(index)<br />
+        &emsp;&emsp;action=InnerAction()<br />
+        <br />
+        &emsp;&emsp;endaction<br />
+        &emsp;endaction<br /><br />
+
+        <b>THE ABOVE IS NOT ALLOWED</b>
+
+    </div>
+</div>

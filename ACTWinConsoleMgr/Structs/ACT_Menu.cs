@@ -4,10 +4,13 @@ using System.Collections.Generic;
 namespace ACT.Applications.ConsoleManager.Structs
 {
 
-    public class ACT_Console_Config
+    public class ACT_Menu
     {
         [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
         public string Id { get; set; }
+
+        [JsonProperty("startup_markup_file", NullValueHandling = NullValueHandling.Ignore)]
+        public string StartupMarkupFile { get; set; }
 
         [JsonProperty("display_name", NullValueHandling = NullValueHandling.Ignore)]
         public string DisplayName { get; set; }
@@ -89,7 +92,7 @@ namespace ACT.Applications.ConsoleManager.Structs
         [JsonProperty("admin_menu_items", NullValueHandling = NullValueHandling.Ignore)]
         public List<Menu_Item> AdminMenuItems { get; set; }
 
-        public static ACT_Console_Config FromJson(string json) => JsonConvert.DeserializeObject<ACT_Console_Config>(json, Helper.Converter.Settings);
+        public static ACT_Menu FromJson(string json) => JsonConvert.DeserializeObject<ACT_Menu>(json, Helper.Converter.Settings);
 
         public string ToJson() => JsonConvert.SerializeObject(this, Helper.Converter.Settings);
     }

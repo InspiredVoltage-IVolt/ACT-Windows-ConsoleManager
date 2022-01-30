@@ -56,13 +56,104 @@ namespace ACT.Applications.ConsoleManager
             public static readonly ParseStringConverter Singleton = new ParseStringConverter();
         }
 
+        internal static class FileProtectionHelper
+        {
+            public static string GetEncryptedString(string UnEncryptedPath, string EncryptedPath, string BackupDirectory = "")
+            {
+                string _tmpReturn = null;
+                bool FoundUnencryptedFile = false;
+                bool FoundEncryptedFile = false;
+
+                if (UnEncryptedPath.FileExists() == true) { FoundUnencryptedFile = true; }
+                if (EncryptedPath.FileExists() == true) { FoundEncryptedFile = true; }
+
+                // Replace Encrypted File After Archive
+                if (FoundEncryptedFile == true && FoundUnencryptedFile == true)
+                {
+                    #region Create Backup -- Use Custom Path If Declared
+                    // TODO Reduce Complexity
+                    if (BackupDirectory.NullOrEmpty() == false)
+                    {
+                        if (BackupDirectory.EnsureDirectoryFormat().DirectoryExists() == false)
+                        {
+                            System.IO.File.Copy(UnEncryptedPath,
+                            UnEncryptedPath.Replace(".json", "-" + DateTime.Now.ToUnixTime().ToString() + ".bak"));
+                        }
+                        else
+                        {
+                            string _Dest = BackupDirectory.EnsureDirectoryFormat() + UnEncryptedPath.GetFileNameFromFullPath()
+                                .Replace(".json", "-" + DateTime.Now.ToUnixTime().ToString() + ".bak");
+
+                            System.IO.File.Copy(UnEncryptedPath, _Dest);
+                        }
+                    }
+                    else
+                    {
+                        System.IO.File.Copy(UnEncryptedPath,
+                        UnEncryptedPath.Replace(".json", "-" + DateTime.Now.ToUnixTime().ToString() + ".bak"));
+                    }
+                    #endregion
+
+                    System.Threading.Thread.Sleep(500);
+                    System.IO.File.Delete(EncryptedPath);
+
+                    try
+                    {
+                        _tmpReturn = ACT.Core.Security.ProtectData.ProtectString(System.IO.File.ReadAllText(UnEncryptedPath), true).ToBase64String();
+                    }
+                    catch // TODO LOG ERROR (Exception ex)
+                    {
+                        return null;
+                    }
+
+                    System.Threading.Thread.Sleep(500);
+                    System.IO.File.Delete(UnEncryptedPath);
+
+                    System.Threading.Thread.Sleep(500);
+                    System.IO.File.WriteAllText(EncryptedPath, _tmpReturn);
+                }
+                else if (FoundEncryptedFile == false && FoundUnencryptedFile == true)
+                {
+                    try
+                    {
+                        _tmpReturn = ACT.Core.Security.ProtectData.ProtectString(System.IO.File.ReadAllText(UnEncryptedPath), true).ToBase64String();
+                    }
+                    catch // TODO LOG ERROR (Exception ex)
+                    {
+                        return null;
+                    }
+                    System.Threading.Thread.Sleep(500);
+                    System.IO.File.Delete(UnEncryptedPath);
+
+                    System.Threading.Thread.Sleep(500);
+                    System.IO.File.WriteAllText(EncryptedPath, _tmpReturn);
+                }
+                else if (FoundEncryptedFile == false && FoundUnencryptedFile == false)
+                {
+                    // TODO LOG ERROR ErrorList_History.Add("Menu Not Found");
+                    return null;
+                }
+                else
+                {
+                    try { _tmpReturn = System.IO.File.ReadAllText(EncryptedPath); }
+                    catch // TODO LOG ERROR (Exception ex)
+                    {
+                        return null;
+                    }
+                }
+
+                return _tmpReturn;
+            }
+        }
+
+
         public static string GetMultilineResponse(string Caption, string EndOfInputString, bool ShowEndOfInputStringCaption = true, bool AllowBlankLines = true, string StartMarkup = "", string EndMarkup = "", bool ReturnConsoleToOriginalMarkup = true)
         {
             string _tmpReturn = "";
             string _tmpLine = null;
 
             if (ReturnConsoleToOriginalMarkup) { }
-            if (StartMarkup.NullOrEmpty() == false) { ConsoleMarkupManager.Core.ProcessMarkup(StartMarkup); }
+            //   if (StartMarkup.NullOrEmpty() == false) { Engine.Core.ProcessMarkup(StartMarkup); }
 
 
 

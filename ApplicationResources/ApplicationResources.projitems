@@ -12,6 +12,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\about.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\blog.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\conception.html" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\config\markuplanguage-actions.json" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\config\topics.json" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\contact.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\css\fancybox.css" />
@@ -135,6 +136,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\images\tmp\valid-html.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\footer.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\logo.html" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\markuplanguage\actions\actionrules-noinneractions.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\menuInclude.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\topics\gettingstarted.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\topics\wsdl.html" />
@@ -147,11 +149,12 @@
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\documentation.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\styles.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\template.html" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\topics\markuplanguage-actions.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\topics\index.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\topics\markuplanguage.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\valid-css.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\valid-html.html" />
-    <Content Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\configuration.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Default_Menu.json" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Developers_Documentation\getting-started.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Developers_Documentation\Images\escheresque.png" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Developers_Documentation\Images\info.png" />
