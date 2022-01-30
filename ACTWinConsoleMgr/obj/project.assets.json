@@ -39,7 +39,7 @@
           }
         }
       },
-      "ACT_Security/2.0.5": {
+      "ACT_Security/2.0.6": {
         "type": "package",
         "dependencies": {
           "IVolt_ACT_ExtensionLibrary": "2.0.5",
@@ -939,14 +939,15 @@
         "lib/net6.0/ACT_Interfaces.dll"
       ]
     },
-    "ACT_Security/2.0.5": {
-      "sha512": "m2KgmLOg//79H0J0wY6SMYvMQUMiDebpWkLb79nFVGaIEp3DQuULUoYlXme3R6hxmbo3elIqHK1J4dBU4vZE9w==",
+    "ACT_Security/2.0.6": {
+      "sha512": "RS3Hp8Kth8H/bnjzjeYW/BZir9sxqqZ7fAH2g0e8P2fVNZESYIkJ8zE4UmA6wqBB7/urtBuOAPE8QuvFIdangg==",
       "type": "package",
-      "path": "act_security/2.0.5",
+      "path": "act_security/2.0.6",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ACT_Security_Icon.png",
-        "act_security.2.0.5.nupkg.sha512",
+        "act_security.2.0.6.nupkg.sha512",
         "act_security.nuspec",
         "content/ACT_Security_Icon.ico",
         "contentFiles/any/net6.0/ACT_Security_Icon.ico",
@@ -3528,7 +3529,7 @@
     "net6.0": [
       "ACT_Enums >= 2.1.0",
       "ACT_Interfaces >= 2.0.9",
-      "ACT_Security >= 2.0.5",
+      "ACT_Security >= 2.0.6",
       "IVolt_ACT_ExtensionLibrary >= 2.1.1",
       "System.Console >= 4.3.1",
       "System.Diagnostics.Debug >= 4.3.0"
@@ -3593,7 +3594,7 @@
           },
           "ACT_Security": {
             "target": "Package",
-            "version": "[2.0.5, )"
+            "version": "[2.0.6, )"
           },
           "IVolt_ACT_ExtensionLibrary": {
             "target": "Package",

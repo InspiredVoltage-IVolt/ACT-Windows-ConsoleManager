@@ -21,12 +21,13 @@ namespace ACT.Applications.ConsoleManager.Engine
         public ACT_Menu_Instance(string MenuName, string MenuPath)
         {
             if (!Core.Initalized) { Core.Init(); }
-
+            this.MenuID = MenuName.ToBase64();
             if (Init(MenuName, MenuPath) < 0) { throw new Exception("Unable To Load The Engine: Please Check Error Log"); }
         }
 
         string LocateMenu(string MenuName, string BaseDirectory)
         {
+
             string _MenuFullPath = BaseDirectory.EnsureDirectoryFormat() + MenuName + "\\" + MenuName + ".json";
             if (_MenuFullPath.FileExists()) { return _MenuFullPath; }
 
@@ -75,7 +76,6 @@ namespace ACT.Applications.ConsoleManager.Engine
             return 1;
         }
 
-
         /// <summary>
         /// Menu Files should be places in the following location path
         ///    DEFAULT LOCATION = _MenuBaseDirectory\###MenuName###\###MenuName###.json
@@ -101,15 +101,9 @@ namespace ACT.Applications.ConsoleManager.Engine
                 return false;
             }
 
-            Structs.ACT_Menu.FromJson(ACT.Core.Security.ProtectData.UnProtectString(_EncryptedData, true);
-
-
+            MenuObject = Structs.ACT_Menu.FromJson(ACT.Core.Security.ProtectData.UnProtectStringToString(_EncryptedData, true));
 
             return false;
-
-
-
-
         }
     }
 }

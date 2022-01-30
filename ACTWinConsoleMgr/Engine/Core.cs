@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ACT.Core.Extensions;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ACT.Applications.ConsoleManager.Engine
 {
@@ -10,7 +12,7 @@ namespace ACT.Applications.ConsoleManager.Engine
         /// TODO Replace To ACT Extensions Method        
         public static ConsoleColor PSC(string ConsoleColorValue) { try { return (ConsoleColor)Enum.Parse(typeof(ConsoleColor), ConsoleColorValue); } catch { throw new Exception(ConsoleColorValue + " Is Not A Valid Console Color."); } }
 
-        public static Structs.ACT_Menu Default_MenuObject = null;
+        public static ACT_Menu_Instance Active_MenuObject = null;
         public static bool Initalized = false;
         public static string BaseDirectory { get; internal set; }
         public static string MenuBaseDirectory { get; internal set; }
@@ -27,7 +29,36 @@ namespace ACT.Applications.ConsoleManager.Engine
             MenuBaseDirectory = BaseDirectory + "Menus\\";
             DefaultDataBaseDirectory = DefaultDataBaseDirectory + "Default\\";
             Initalized = true;
+        }
 
+        public static void RunMenu(string MenuName) { RunMenu(MenuName, MenuBaseDirectory); }
+
+        public static void RunMenu(string MenuName, string LocationBasePath)
+        {
+            if (LoadedMenus.Exists(x => x.MenuID == MenuName.ToBase64()) == false)
+            {
+                ACT_Menu_Instance _Menu = new ACT_Menu_Instance(MenuName, LocationBasePath);
+                if (_Menu != null) { LoadedMenus.Add(_Menu); }
+                else { throw new Exception("Unable to locate Menu"); }
+            }
+
+            Active_MenuObject = LoadedMenus.First(x => x.MenuID == ActiveMenuID);
+
+            // RUN THIS MENU BABY
+            StartMenuEngine(MenuName.ToBase64());
+        }
+
+        static void StartMenuEngine(string MenuID)
+        {
+            // Run Startup Markup File If Defined
+            var _startupMarkupFile = Active_MenuObject.MenuObject.StartupMarkupFile;
+            if (_startupMarkupFile != null)
+            {
+                if (_startupMarkupFile.FileExists())
+                {
+                    LoadMarkup(MenuID, _startupMarkupFile.ReadAllText(), false);
+                }
+            }
 
         }
 

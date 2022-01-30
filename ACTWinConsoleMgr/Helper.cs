@@ -99,7 +99,7 @@ namespace ACT.Applications.ConsoleManager
 
                     try
                     {
-                        _tmpReturn = ACT.Core.Security.ProtectData.ProtectString(System.IO.File.ReadAllText(UnEncryptedPath), true).ToBase64String();
+                        _tmpReturn = ACT.Core.Security.ProtectData.ProtectStringToString(System.IO.File.ReadAllText(UnEncryptedPath), true);
                     }
                     catch // TODO LOG ERROR (Exception ex)
                     {
@@ -116,7 +116,7 @@ namespace ACT.Applications.ConsoleManager
                 {
                     try
                     {
-                        _tmpReturn = ACT.Core.Security.ProtectData.ProtectString(System.IO.File.ReadAllText(UnEncryptedPath), true).ToBase64String();
+                        _tmpReturn = ACT.Core.Security.ProtectData.ProtectStringToString(System.IO.File.ReadAllText(UnEncryptedPath), true);
                     }
                     catch // TODO LOG ERROR (Exception ex)
                     {
