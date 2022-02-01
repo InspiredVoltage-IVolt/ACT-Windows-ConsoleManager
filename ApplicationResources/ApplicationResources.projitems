@@ -9,6 +9,8 @@
     <Import_RootNamespace>ApplicationResources</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Default\Default_Menu_Permissions.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Menus\ACT_Example_Menu\ACT_Example_Menu_Permissions.json" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\about.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\blog.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\conception.html" />
@@ -154,7 +156,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\topics\markuplanguage.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\valid-css.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\valid-html.html" />
-    <Content Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Default_Menu.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Default\Default_Menu.json" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Developers_Documentation\getting-started.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Developers_Documentation\Images\escheresque.png" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Developers_Documentation\Images\info.png" />
@@ -342,5 +344,8 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Menus\ACT_Example_Menu\displaymarkups\act_example_header.wcmt" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Menus\ACT_Example_Menu\displaymarkups\act_example_adminheader.wcmt" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Default\displaymarkups\defaultadminheader.wcmt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Menus\ACT_Example_Menu\csharpcachedirectory\" />
   </ItemGroup>
 </Project>

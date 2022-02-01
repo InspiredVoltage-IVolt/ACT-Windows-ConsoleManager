@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "4fHClXtQ5UE3oUUKTt18wXZY5HzIkmjH/ZxYy7xnVE8px/AbJ4IA1zlKXWea3UGBqRJNJ/Rkn4uBAuF4gK1Hwg==",
+  "dgSpecHash": "lmJuPDnFb6teSwDekZK2XL/aaMnbeYJwT9Gvl6dBpoQnBAJ9p8mNBf0AE42+b3U/7JD16PV5grRohwK3eBv/sQ==",
   "success": true,
   "projectFilePath": "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\Project_TestConsole\\Project_TestConsole.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MarkAlicz\\.nuget\\packages\\act_enums\\2.1.0\\act_enums.2.1.0.nupkg.sha512",
     "C:\\Users\\MarkAlicz\\.nuget\\packages\\act_interfaces\\2.0.9\\act_interfaces.2.0.9.nupkg.sha512",
-    "C:\\Users\\MarkAlicz\\.nuget\\packages\\act_security\\2.0.5\\act_security.2.0.5.nupkg.sha512",
+    "C:\\Users\\MarkAlicz\\.nuget\\packages\\act_security\\2.0.6\\act_security.2.0.6.nupkg.sha512",
     "C:\\Users\\MarkAlicz\\.nuget\\packages\\fastexcel\\3.0.13\\fastexcel.3.0.13.nupkg.sha512",
     "C:\\Users\\MarkAlicz\\.nuget\\packages\\ivolt_act_extensionlibrary\\2.1.1\\ivolt_act_extensionlibrary.2.1.1.nupkg.sha512",
     "C:\\Users\\MarkAlicz\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
