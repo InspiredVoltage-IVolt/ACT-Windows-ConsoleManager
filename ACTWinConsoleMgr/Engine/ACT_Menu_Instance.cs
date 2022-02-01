@@ -7,11 +7,22 @@ namespace ACT.Applications.ConsoleManager.Engine
     public class ACT_Menu_Instance
     {
         public string MenuID { get; private set; }
+        public string MenuName { get; private set; }
         public Structs.ACT_Menu MenuObject;
+        public List<Structs.ACT_MarkupFile> MarkupFiles = new List<Structs.ACT_MarkupFile>();
+        public SortedDictionary<string, string> Variables = new SortedDictionary<string, string>();
+        public bool IsDefaultMenu = false;
+        public bool MenuLoaded { get { return _MenuLoaded; } }
         public List<string> ErrorList_History = new List<string>();
+        public string MenuHomeDirectory = "";
+        public Structs.ACT_Console_Menu_Permissions MenuPermissions = null;
 
         bool _MenuLoaded = false;
         string _EncryptedData = null;
+
+        public string MarkupDirectory { get { return MenuHomeDirectory.EnsureDirectoryFormat() + "displaymarkups\\"; } }
+        public string CSharpCacheDirectory { get { return MenuHomeDirectory.EnsureDirectoryFormat() + "csharpcachedirectory\\"; } }
+
 
         /// <summary>
         /// ACT Console Menu Constructor
@@ -22,17 +33,42 @@ namespace ACT.Applications.ConsoleManager.Engine
         {
             if (!Core.Initalized) { Core.Init(); }
             this.MenuID = MenuName.ToBase64();
+            this.MenuName = MenuName;
+
             if (Init(MenuName, MenuPath) < 0) { throw new Exception("Unable To Load The Engine: Please Check Error Log"); }
+
+            if (_MenuLoaded == false) { throw new Exception("Unable To Load The Engine: Please Check Error Log"); }
+            if (MenuObject == null) { throw new Exception("Unable To Load The Engine: Please Check Error Log"); }
         }
 
-        string LocateMenu(string MenuName, string BaseDirectory)
+        /// <summary>
+        /// Locate the Menu File Specified
+        /// </summary>
+        /// <param name="MenuName"></param>
+        /// <param name="BaseDirectory"></param>
+        /// <param name="NonEncrypted"></param>
+        /// <returns></returns>
+        string LocateMenu(string MenuName, string BaseDirectory, bool NonEncrypted = true)
         {
 
-            string _MenuFullPath = BaseDirectory.EnsureDirectoryFormat() + MenuName + "\\" + MenuName + ".json";
-            if (_MenuFullPath.FileExists()) { return _MenuFullPath; }
+            string _MenuFullPath = "";
 
-            _MenuFullPath = BaseDirectory.FindFileReturnPath(MenuName + ".json", true);
-            if (_MenuFullPath.NullOrEmpty() == false && _MenuFullPath.FileExists()) { return _MenuFullPath; }
+            if (NonEncrypted)
+            {
+                _MenuFullPath = BaseDirectory.EnsureDirectoryFormat() + MenuName + "\\" + MenuName + ".json";
+                if (_MenuFullPath.FileExists()) { return _MenuFullPath; }
+
+                _MenuFullPath = BaseDirectory.FindFileReturnPath(MenuName + ".json", true);
+                if (_MenuFullPath.NullOrEmpty() == false && _MenuFullPath.FileExists()) { return _MenuFullPath; }
+            }
+            else
+            {
+                _MenuFullPath = BaseDirectory.EnsureDirectoryFormat() + MenuName + "\\" + MenuName + ".enc";
+                if (_MenuFullPath.FileExists()) { return _MenuFullPath; }
+
+                _MenuFullPath = BaseDirectory.FindFileReturnPath(MenuName + ".enc", true);
+                if (_MenuFullPath.NullOrEmpty() == false && _MenuFullPath.FileExists()) { return _MenuFullPath; }
+            }
 
             ErrorList_History.Add("Menu Not Found");
             return "";
@@ -88,22 +124,43 @@ namespace ACT.Applications.ConsoleManager.Engine
         /// </returns>
         bool LoadMenu(string MenuName, string BaseDirectory)
         {
+            _MenuLoaded = false;
+
             // Locate The Menu Full Path
             string _MenuFileFullPath = LocateMenu(MenuName, BaseDirectory);
-            // Set The Encryption File Name
-            string _MenuFileFullPathEncrypted = BaseDirectory.EnsureDirectoryFormat() + MenuName + "\\" + MenuName + ".json";
 
-            _EncryptedData = Helper.FileProtectionHelper.GetEncryptedString(_MenuFileFullPath, _MenuFileFullPathEncrypted);
-
-            if (_EncryptedData == null)
+            if (MenuName == "Default_Menu")
             {
-                _MenuLoaded = false;
-                return false;
+                MenuObject = Structs.ACT_Menu.FromJson(_MenuFileFullPath.ReadAllText());
+
+                if (MenuObject == null) { return false; }
+                else if (MenuObject.Id.NullOrEmpty()) { return false; }
+                else
+                {
+                    IsDefaultMenu = true;
+                    return true;
+                }
             }
+            else
+            {
+                // Set The Encryption File Name
+                string _MenuFileFullPathEncrypted = LocateMenu(MenuName, BaseDirectory, false);
 
-            MenuObject = Structs.ACT_Menu.FromJson(ACT.Core.Security.ProtectData.UnProtectStringToString(_EncryptedData, true));
+                if (_MenuFileFullPath.FileExists() == false && _MenuFileFullPathEncrypted.FileExists() == false) { return false; }
 
-            return false;
+                if (_MenuFileFullPath.FileExists()) { this.MenuHomeDirectory = _MenuFileFullPath.GetDirectoryFromFileLocation().EnsureDirectoryFormat(); }
+                if (_MenuFileFullPathEncrypted.FileExists()) { this.MenuHomeDirectory = _MenuFileFullPathEncrypted.GetDirectoryFromFileLocation().EnsureDirectoryFormat(); }
+
+                _EncryptedData = Helper.FileProtectionHelper.CleanupEncryptedFileLogic_ReturnEncryptedData(_MenuFileFullPath, _MenuFileFullPathEncrypted);
+
+                if (_EncryptedData.NullOrEmpty()) { return false; }
+
+                MenuObject = Structs.ACT_Menu.FromJson(ACT.Core.Security.ProtectData.UnProtectStringToString(_EncryptedData, true));
+
+                if (MenuObject == null) { return false; }
+                else if (MenuObject.Id.NullOrEmpty()) { return false; }
+                else { return true; }
+            }
         }
     }
 }

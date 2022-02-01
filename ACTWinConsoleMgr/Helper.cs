@@ -58,7 +58,7 @@ namespace ACT.Applications.ConsoleManager
 
         internal static class FileProtectionHelper
         {
-            public static string GetEncryptedString(string UnEncryptedPath, string EncryptedPath, string BackupDirectory = "")
+            public static string CleanupEncryptedFileLogic_ReturnEncryptedData(string UnEncryptedPath, string EncryptedPath, string BackupDirectory = "")
             {
                 string _tmpReturn = null;
                 bool FoundUnencryptedFile = false;
@@ -153,9 +153,6 @@ namespace ACT.Applications.ConsoleManager
             string _tmpLine = null;
 
             if (ReturnConsoleToOriginalMarkup) { }
-            //   if (StartMarkup.NullOrEmpty() == false) { Engine.Core.ProcessMarkup(StartMarkup); }
-
-
 
             while (_tmpLine != EndOfInputString)
             {

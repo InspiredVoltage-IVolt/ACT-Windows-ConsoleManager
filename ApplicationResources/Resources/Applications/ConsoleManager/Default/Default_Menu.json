@@ -1,6 +1,7 @@
 ﻿{
   "id": "DefaultDemo",
   "display_name": "ACT Default Demo Menu",
+  "startup_markupfile": "act_example_startup.wcmt",
   "menu_header_markupfile": "defaultheader.wcmt",
   "menu_footer_markupfile": "defaultfooter.wcmt",
   "default_background": "Black",

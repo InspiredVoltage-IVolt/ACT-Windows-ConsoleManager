@@ -1,0 +1,19 @@
+﻿{
+  "users": [
+    {
+      "username": "kaiser_rocky",
+      "password": "",
+      "groups": [ "", "" ],
+      "additional_info": [
+        {
+          "name": "FirstName",
+          "value": "Mark"
+        },
+        {
+          "name": "Emai",
+          "value": "Mark@Ivolt.io"
+        }
+      ]
+    }
+  ]
+}
