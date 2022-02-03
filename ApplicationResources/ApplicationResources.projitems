@@ -140,12 +140,15 @@
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\logo.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\markuplanguage\actions\actionrules-noinneractions.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\menuInclude.html" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\sitemap_template.xml" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\topics\gettingstarted.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\topics\wsdl.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\index .bak" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\index.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\index2.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\portfolio.html" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\robots.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\sitemap.xml" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\solution.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\structure.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\documentation.html" />
@@ -178,6 +181,9 @@
     <Content Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Menus\ACT_Example_Menu\ACT_Example_Menu.json" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Default\displaymarkups\defaultlogin.wcmt" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Default\displaymarkups\defaultheader.wcmt" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Default\displaymarkups\defaultfooter.wcmt" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Default\displaymarkups\defaultconfig.wcmt" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Default\displaymarkups\defaultadmin.wcmt" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Menus\ACT_Example_Menu\displaymarkups\act_example_admin.wcmt" />
@@ -347,5 +353,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Menus\ACT_Example_Menu\csharpcachedirectory\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\topics\NewFolder\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\data\" />
   </ItemGroup>
 </Project>

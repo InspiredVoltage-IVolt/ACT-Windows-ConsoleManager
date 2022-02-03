@@ -1,0 +1,29 @@
+﻿###STARTMARKUP###	
+	hidemarkup("menu_header")
+	clr()
+	bg=Black
+	fg=DarkRed	
+	txtl=""
+	txtl="------------------------------------- ACT CONSOLE MENU LOGIN -------------------------------------""
+	txtl=""
+	txtl="Please enter your username and password to continue."
+	txtl="--------------------------------------------------------------"
+	txtl="Built in logins are below."
+	txtl="(admin/admin or poweruser/poweruser or guest/guest)"
+	txtl="--------------------------------------------------------------"
+	txtl=""
+	action=defaultlogin
+	txt="Username: "
+	getl("UserName_ACT_ConsoleManager")
+	txtl=""
+	txt="Password: "
+	getlm("Password_ACT_ConsoleManager","*")
+	run("LoginAction","UserName_ACT_ConsoleManager","Password_ACT_ConsoleManager")
+	endaction=defaultlogin
+
+	runaction(defaultlogin, 1, 3, execute(exitapp,"Invalid Login Attempts."))
+	showmarkup("menu_header")
+	return();
+###ENDMARKUP###
+
+

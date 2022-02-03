@@ -1,0 +1,10 @@
+﻿###STARTMARKUP###	
+	clr()
+	bg=Black
+	fg=DarkRed	
+	width=120
+	height=50
+	txtl="---------------------------------------- ACT CONSOLE MENU ----------------------------------------"
+###ENDMARKUP###
+
+
