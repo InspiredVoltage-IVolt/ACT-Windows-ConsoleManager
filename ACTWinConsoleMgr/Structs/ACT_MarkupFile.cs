@@ -9,6 +9,8 @@ namespace ACT.Applications.ConsoleManager.Structs
     /// </summary>
     public class ACT_MarkupFile
     {
+        public bool ValidFile = false;
+
         // Constructor
         public ACT_MarkupFile() { }
 
@@ -70,7 +72,7 @@ namespace ACT.Applications.ConsoleManager.Structs
         public byte[] CompiledMarkup_Data = null;
         #endregion
 
-        #region Private Methods
+        #region Private Methods - Processing Methods
 
         private bool IsProperty(string Value)
         {
@@ -257,6 +259,7 @@ namespace ACT.Applications.ConsoleManager.Structs
 
             //Structs.ACT_MarkupFile _NewCode = new Structs.ACT_MarkupFile(MarkupID);
             SetData(_AllProperties, _AllMethods, _AllCSharpCodes, _AllActions);
+            ValidFile = true;
         }
 
         /// <summary>

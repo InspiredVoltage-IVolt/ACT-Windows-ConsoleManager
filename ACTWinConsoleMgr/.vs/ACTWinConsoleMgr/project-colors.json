@@ -20,7 +20,12 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "cdc3f847-6533-4172-9ce5-6e9219a08668": {
+      "ProjectGuid": "cdc3f847-6533-4172-9ce5-6e9219a08668",
+      "DisplayName": "VSCode_Extension_WCML_Markup",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }

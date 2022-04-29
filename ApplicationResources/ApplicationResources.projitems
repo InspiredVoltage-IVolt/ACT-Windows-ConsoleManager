@@ -11,6 +11,14 @@
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Default\Default_Menu_Permissions.json" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Menus\ACT_Example_Menu\ACT_Example_Menu_Permissions.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Menus\ACT_Example_Menu\savestates\MarkupVariables.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Applications\GoogleAPI\act-analytics-342203-6a85574c3ff6.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Applications\GoogleAPI\act-core-gmail-614853f39961.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Applications\GoogleAPI\client_secret_822928842213-i1tgggrluur2a5of0mj4ippm3oukqjj6.apps.googleusercontent.com.json" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\about.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\blog.html" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\conception.html" />
@@ -353,6 +361,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\Menus\ACT_Example_Menu\csharpcachedirectory\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\Applications\ConsoleManager\CSharpCompiles\" />
     <Folder Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\includes\topics\NewFolder\" />
     <Folder Include="$(MSBuildThisFileDirectory)Resources\Documentation\Applications_Documentation\ACT_ConsoleManager\data\" />
   </ItemGroup>

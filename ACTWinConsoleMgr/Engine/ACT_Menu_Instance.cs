@@ -10,19 +10,27 @@ namespace ACT.Applications.ConsoleManager.Engine
         public string MenuName { get; private set; }
         public Structs.ACT_Menu MenuObject;
         public List<Structs.ACT_MarkupFile> MarkupFiles = new List<Structs.ACT_MarkupFile>();
-        public SortedDictionary<string, string> Variables = new SortedDictionary<string, string>();
         public bool IsDefaultMenu = false;
         public bool MenuLoaded { get { return _MenuLoaded; } }
         public List<string> ErrorList_History = new List<string>();
         public string MenuHomeDirectory = "";
         public Structs.ACT_Console_Menu_Permissions MenuPermissions = null;
+        public ACT_Markup_Variables MarkupFileVariables = new ACT_Markup_Variables();
 
         bool _MenuLoaded = false;
         string _EncryptedData = null;
 
         public string MarkupDirectory { get { return MenuHomeDirectory.EnsureDirectoryFormat() + "displaymarkups\\"; } }
         public string CSharpCacheDirectory { get { return MenuHomeDirectory.EnsureDirectoryFormat() + "csharpcachedirectory\\"; } }
-
+        public string SaveStatesDirectory { get { return MenuHomeDirectory.EnsureDirectoryFormat() + "savestates\\"; } }
+        public string GetVariableValue(string Name, string MarkupFileName)
+        {
+            return MarkupFileVariables.Get(Name, MarkupFileName);
+        }
+        public void SetVariableValue(string Name, string Value, string MarkupFileName, bool Global)
+        {
+            MarkupFileVariables.Set(Name, Value, MarkupFileName, Global);
+        }
 
         /// <summary>
         /// ACT Console Menu Constructor

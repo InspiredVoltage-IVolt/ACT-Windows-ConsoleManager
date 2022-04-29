@@ -1,7 +1,7 @@
-﻿using ACT.Core.Extensions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ACT.Core.Extensions;
 
 namespace ACT.Applications.ConsoleManager.Engine
 {
@@ -19,7 +19,6 @@ namespace ACT.Applications.ConsoleManager.Engine
         public static string DefaultDataBaseDirectory { get; internal set; }
         public static string ActiveMenuID;
         public static List<ACT_Menu_Instance> LoadedMenus = new List<ACT_Menu_Instance>();
-        private static Structs.ACT_Markup_Global_Variables _MenuGlobalVariables = new Structs.ACT_Markup_Global_Variables();
 
 
 

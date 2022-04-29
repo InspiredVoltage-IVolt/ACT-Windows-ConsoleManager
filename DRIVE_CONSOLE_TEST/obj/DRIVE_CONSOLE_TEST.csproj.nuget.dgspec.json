@@ -1,0 +1,77 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\DRIVE_CONSOLE_TEST\\DRIVE_CONSOLE_TEST.csproj": {}
+  },
+  "projects": {
+    "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\DRIVE_CONSOLE_TEST\\DRIVE_CONSOLE_TEST.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\DRIVE_CONSOLE_TEST\\DRIVE_CONSOLE_TEST.csproj",
+        "projectName": "DRIVE_CONSOLE_TEST",
+        "projectPath": "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\DRIVE_CONSOLE_TEST\\DRIVE_CONSOLE_TEST.csproj",
+        "packagesPath": "C:\\Users\\MarkAlicz\\.nuget\\packages\\",
+        "outputPath": "D:\\IVolt_Development\\ACTWinConsoleManager\\ACTWinConsoleManager\\DRIVE_CONSOLE_TEST\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MarkAlicz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress .NET Core Desktop 20.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
+          "http://actnuget.homeunix.com:5555/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Google.Apis.Drive.v3": {
+              "target": "Package",
+              "version": "[1.56.0.2601, )"
+            },
+            "Google.Apis.Gmail.v1": {
+              "target": "Package",
+              "version": "[1.56.0.2510, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

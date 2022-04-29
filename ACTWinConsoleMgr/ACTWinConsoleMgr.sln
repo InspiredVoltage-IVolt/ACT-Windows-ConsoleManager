@@ -5,16 +5,20 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACT_ConsoleManager", "ACT_ConsoleManager.csproj", "{EB97E17E-A6B4-4940-A8EA-FC73034D6C08}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ApplicationResources", "..\ApplicationResources\ApplicationResources.shproj", "{FC234E3E-8673-4643-A352-626B1E43A5D3}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project_TestConsole", "..\Project_TestConsole\Project_TestConsole.csproj", "{F30503E3-1BFC-4945-B2C4-6E5AA4DAC73F}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "VSCode_Extension_WCML_Markup", "..\VSCode_Extension_WCML_Markup\VSCode_Extension_WCML_Markup.shproj", "{CDC3F847-6533-4172-9CE5-6E9219A08668}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GOOGLE_APIS", "GOOGLE_APIS", "{1E9DC643-3C48-48C2-9714-BF6B3D8FC1E9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DRIVE_CONSOLE_TEST", "..\DRIVE_CONSOLE_TEST\DRIVE_CONSOLE_TEST.csproj", "{88F28E39-B6AC-4D02-8F09-E99BFED45FBB}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Resources", "..\..\..\_Resources_Shared\Resources\Resources\Resources.shproj", "{48C2C9AB-5274-4BE2-BA97-3C3C81B271BA}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\_Resources_Shared\Resources\Resources\Resources.projitems*{48c2c9ab-5274-4be2-ba97-3c3c81b271ba}*SharedItemsImports = 13
 		..\VSCode_Extension_WCML_Markup\VSCode_Extension_WCML_Markup.projitems*{cdc3f847-6533-4172-9ce5-6e9219a08668}*SharedItemsImports = 13
-		..\ApplicationResources\ApplicationResources.projitems*{fc234e3e-8673-4643-a352-626b1e43a5d3}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,9 +33,16 @@ Global
 		{F30503E3-1BFC-4945-B2C4-6E5AA4DAC73F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F30503E3-1BFC-4945-B2C4-6E5AA4DAC73F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F30503E3-1BFC-4945-B2C4-6E5AA4DAC73F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88F28E39-B6AC-4D02-8F09-E99BFED45FBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88F28E39-B6AC-4D02-8F09-E99BFED45FBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88F28E39-B6AC-4D02-8F09-E99BFED45FBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88F28E39-B6AC-4D02-8F09-E99BFED45FBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{88F28E39-B6AC-4D02-8F09-E99BFED45FBB} = {1E9DC643-3C48-48C2-9714-BF6B3D8FC1E9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9D0B1E88-D189-49AB-ADAB-417CAB70DB96}

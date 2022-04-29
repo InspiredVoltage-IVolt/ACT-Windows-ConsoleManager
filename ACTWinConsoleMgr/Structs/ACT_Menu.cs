@@ -3,6 +3,11 @@ using System.Collections.Generic;
 
 namespace ACT.Applications.ConsoleManager.Structs
 {
+    
+    public abstract class CCGUser
+    {
+        public virtual void Load() { }
+    }
 
     public class ACT_Menu
     {

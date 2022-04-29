@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "act-analytics-342203",
+  "private_key_id": "6a85574c3ff6ea3235cf9afc5ad1babb839c3500",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCoa+dQkfLEwjSX\nwXbbs5wMum6PZjK1HK1einpHG5iq5+W3Dp/pT4D4mPOKeuIYH8Wbbcery4glwc4w\nhIcgb7WCMnGq9RvLHU9KWL71mUqx/DiOE285GMaXfvzW6i5C6a+Enq2zAdXyVQ5r\nghmwUEcd63CHlMRAIDYk8c/e+lFPJVTqTMbmIARYiKkEqCAo1OSRMJ1f5FhDaI9w\nhbdNS6sOit/74LAfMq83c0yuFvXS+ueIHu85QyJ3xTMrieYDoarFGblz8YDY0TZG\nrJnIYKBbMyD82lSuXQwh7v63L0U6GyMUDVXZkwi/rd2BHwATPYdeJOn0n0rnmS2S\nFZq/Gy7pAgMBAAECggEAE/NWPxPO1XJo3vomnX9g8pwJ+TgitRQM0GhodDBnbQVT\nz5OuqylFDo21ubd1PWTUGGWQc8AEJG7ZASPNyvCYqG/XyafHz09tQ1IQatDqCXvm\naiQQtouCCNOc2Ut7x+bdKQFP86a5xH9BWkhaySk1R2zKk3Dyr2Lxbv5rAI+X3p9M\n6aDbV9sq0O1UvKUQaDtPJafbkgO+74vFlX6JCSH8EeHeN1nDsuFBTvgWNsXzvJXn\n3BaXofYQ11JUdOShm/Mj3MAuVqi7+2aWvkFkLjdDEDi2o5FQ1c4Y+YoqznH9QG3p\nuKyXRUr7IrHaIZWT5KFyrOTfDhcTyx4V0nM0inT4VQKBgQDeJhfVgotVwIrAeayi\n7oCRAJqzRFNhndBUVq5WiKO0vP3E22jeww6zt5MIQ/XtGeKM9ab9m4L7PWgTKkuY\nYpYW4GzYbr4cOpKlWXzaGPpDHl5VWCvLNDLSpkkMPfLqeJJhzLDulxIfqOqQwyu6\nTPVTTI3neL1Xr29JjgGm+BKn/QKBgQDCFe/XyND/WTnDLplJCKTj96KT+HxpssUZ\nN7rixz55UdNGf9fZpgqAmWk8Gdw6xVuCz6gnz3BPBGBp1rfT2LNGRYpgAei0zYNT\nBxWqve+ViUbUpyXyJZvXikSyuCCj2YbnQ5uetE2ip6asmMNZ4glXXcmQO2TX6sxI\nS17yrPlIXQKBgHr+gkGvRm/S67+HXmLTRBGEUSKh2Lx6QMcBOwMkIedGoAYnKJf1\nTSWJpPl1jyqYI0vCEpPlTw7FP+MkjrgvFURTO1BVeCJu95ReyHaET8Nrg/UinRSj\nsOPaNyV1AxJ4cSt+xhNDR0CKKFzAAmzigQ1+nC6lNcfflPEXk6ibPtENAoGAFBHi\nqGS6v/0BDR7veO7s5ioAZN7INsHmwdHSgIrr+e2tNFgaAQa7hUrX6AAglu87pE5G\n7D72NSWVtrwebEi3WSftxDnOT4wE7XwJEIvtj4APlAPo155t/B7vNa/2qBrhaV7D\nY+jvMke145k0ckH+h0tKgaCyr+U21K7+lYevi30CgYEAiT22JqhzKReKOM1hbLlG\nf/RWwtIQt2rUmbBbgyNJWFq89QQRA57mMOhJj2jMkqOiefKy5Imm42t5B5Bg/fh8\n9eP8ZDUzt36bjqu7jt4RmOI+POyFP8yxb+ok/laJeFB0l8yUhE8Mi1QXfZkdSCnx\nuibQCXu3eHCISL5Vtq++fy8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "actanalyticsserviceaccount@act-analytics-342203.iam.gserviceaccount.com",
+  "client_id": "101627525572879655661",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/actanalyticsserviceaccount%40act-analytics-342203.iam.gserviceaccount.com"
+}
