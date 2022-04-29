@@ -9,9 +9,9 @@ namespace ACT.Applications.ConsoleManager.Structs
         [JsonProperty("users", NullValueHandling = NullValueHandling.Ignore)]
         public List<ACT_Console_Menu_Permissions_User> Users { get; set; }
 
-        public static ACT_Console_Menu_Permissions FromJson(string json) => JsonConvert.DeserializeObject<ACT_Console_Menu_Permissions>(json, Helper.Converter.Settings);
+        public static ACT_Console_Menu_Permissions FromJson(string json) => JsonConvert.DeserializeObject<ACT_Console_Menu_Permissions>(json, JSON_Helper.Converter.Settings);
 
-        public string ToJson() => JsonConvert.SerializeObject(this, Helper.Converter.Settings);
+        public string ToJson() => JsonConvert.SerializeObject(this, JSON_Helper.Converter.Settings);
     }
 
     public class ACT_Console_Menu_Permissions_User

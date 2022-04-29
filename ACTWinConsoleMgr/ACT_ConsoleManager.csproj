@@ -43,10 +43,6 @@
 
   <ItemGroup>
     <None Include="Engine\DEPRECIATED__ACT_Markup_Global_Variable.cs" />
-    <None Include="M:\Shared drives\Assets\IVolt_Product_Images\ACT\ACT_ConsoleManager\ACT_ConsoleMgr_Icon.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
   </ItemGroup>
 
   <ItemGroup>

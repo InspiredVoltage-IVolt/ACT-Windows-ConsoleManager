@@ -6,7 +6,7 @@ using System.Globalization;
 
 namespace ACT.Applications.ConsoleManager
 {
-    public static class Helper
+    public static class JSON_Helper
     {
         internal static class Converter
         {
@@ -146,7 +146,10 @@ namespace ACT.Applications.ConsoleManager
             }
         }
 
+    }
 
+    public static class Helper
+    {
         public static string GetMultilineResponse(string Caption, string EndOfInputString, bool ShowEndOfInputStringCaption = true, bool AllowBlankLines = true, string StartMarkup = "", string EndMarkup = "", bool ReturnConsoleToOriginalMarkup = true)
         {
             string _tmpReturn = "";

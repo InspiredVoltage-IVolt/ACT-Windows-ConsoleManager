@@ -16,9 +16,9 @@ namespace ACT.Applications.ConsoleManager.Structs
         [JsonProperty("markupfile_variables", NullValueHandling = NullValueHandling.Ignore)]
         public List<Markup_File_Variables> MarkupFileVariables { get; set; }
 
-        public static Menu_Variables_SaveState FromJson(string json) => JsonConvert.DeserializeObject<Menu_Variables_SaveState>(json, Helper.Converter.Settings);
+        public static Menu_Variables_SaveState FromJson(string json) => JsonConvert.DeserializeObject<Menu_Variables_SaveState>(json, JSON_Helper.Converter.Settings);
 
-        public string ToJson() => JsonConvert.SerializeObject(this, Helper.Converter.Settings);
+        public string ToJson() => JsonConvert.SerializeObject(this, JSON_Helper.Converter.Settings);
     }
 
     public class Variables

@@ -33,11 +33,11 @@ namespace ACT.Applications.ConsoleManager.Structs
         public string DefaultForeground { get; set; }
 
         [JsonProperty("default_width", NullValueHandling = NullValueHandling.Ignore)]
-        [JsonConverter(typeof(Helper.ParseStringConverter))]
+        [JsonConverter(typeof(JSON_Helper.ParseStringConverter))]
         public long? DefaultWidth { get; set; }
 
         [JsonProperty("default_height", NullValueHandling = NullValueHandling.Ignore)]
-        [JsonConverter(typeof(Helper.ParseStringConverter))]
+        [JsonConverter(typeof(JSON_Helper.ParseStringConverter))]
         public long? DefaultHeight { get; set; }
 
         [JsonProperty("require_enter_button_press", NullValueHandling = NullValueHandling.Ignore)]
@@ -97,9 +97,9 @@ namespace ACT.Applications.ConsoleManager.Structs
         [JsonProperty("admin_menu_items", NullValueHandling = NullValueHandling.Ignore)]
         public List<Menu_Item> AdminMenuItems { get; set; }
 
-        public static ACT_Menu FromJson(string json) => JsonConvert.DeserializeObject<ACT_Menu>(json, Helper.Converter.Settings);
+        public static ACT_Menu FromJson(string json) => JsonConvert.DeserializeObject<ACT_Menu>(json, JSON_Helper.Converter.Settings);
 
-        public string ToJson() => JsonConvert.SerializeObject(this, Helper.Converter.Settings);
+        public string ToJson() => JsonConvert.SerializeObject(this, JSON_Helper.Converter.Settings);
     }
 
 

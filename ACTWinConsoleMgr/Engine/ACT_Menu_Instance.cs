@@ -159,7 +159,7 @@ namespace ACT.Applications.ConsoleManager.Engine
                 if (_MenuFileFullPath.FileExists()) { this.MenuHomeDirectory = _MenuFileFullPath.GetDirectoryFromFileLocation().EnsureDirectoryFormat(); }
                 if (_MenuFileFullPathEncrypted.FileExists()) { this.MenuHomeDirectory = _MenuFileFullPathEncrypted.GetDirectoryFromFileLocation().EnsureDirectoryFormat(); }
 
-                _EncryptedData = Helper.FileProtectionHelper.CleanupEncryptedFileLogic_ReturnEncryptedData(_MenuFileFullPath, _MenuFileFullPathEncrypted);
+                _EncryptedData = JSON_Helper.FileProtectionHelper.CleanupEncryptedFileLogic_ReturnEncryptedData(_MenuFileFullPath, _MenuFileFullPathEncrypted);
 
                 if (_EncryptedData.NullOrEmpty()) { return false; }
 
